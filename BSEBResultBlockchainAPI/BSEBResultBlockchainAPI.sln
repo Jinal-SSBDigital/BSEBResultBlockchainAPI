@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36930.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSEBResultBlockchainAPI", "BSEBResultBlockchainAPI.csproj", "{EEEE5DAB-9749-48D2-9739-952108E660C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEEE5DAB-9749-48D2-9739-952108E660C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEE5DAB-9749-48D2-9739-952108E660C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEE5DAB-9749-48D2-9739-952108E660C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEE5DAB-9749-48D2-9739-952108E660C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C1D3998-EB21-4249-AE75-3E5E1A005873}
+	EndGlobalSection
+EndGlobal

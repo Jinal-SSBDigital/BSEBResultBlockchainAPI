@@ -1,0 +1,1040 @@
+2026-04-07 14:24:29.770 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 14:24:29.932 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 14:24:30.110 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 14:24:30.133 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 14:24:30.136 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 14:24:34.684 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 14:24:35.094 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 421.8996ms
+2026-04-07 14:24:35.401 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 14:24:35.401 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 14:24:35.412 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 11.9103ms
+2026-04-07 14:24:35.502 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.1904ms
+2026-04-07 14:24:35.576 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 14:24:35.595 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.3441ms
+2026-04-07 14:26:35.550 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [16] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 14:26:35.575 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [16] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:26:35.607 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [16] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 14:26:39.382 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 14:26:39.387 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [16] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 14:26:40.008 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [16] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 4380.6795ms
+2026-04-07 14:26:40.012 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [16] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:26:40.021 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [16] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 4468.7203ms
+2026-04-07 14:26:49.817 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] Total roll pairs fetched: 10
+2026-04-07 14:27:14.642 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.647 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.700 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.708 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.709 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.710 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:14.770 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Received HTTP response headers after 52.2305ms - 400
+2026-04-07 14:27:14.770 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 54.7028ms - 400
+2026-04-07 14:27:14.770 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 117.869ms - 400
+2026-04-07 14:27:14.774 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] End processing HTTP request after 65.8038ms - 400
+2026-04-07 14:27:14.774 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 73.6985ms - 400
+2026-04-07 14:27:14.776 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 135.1274ms - 400
+2026-04-07 14:27:15.040 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] Failed for RollCode=21137 RollNo=26030018
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:27:15.040 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] Failed for RollCode=91213 RollNo=26030025
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:27:15.049 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:15.040 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] Failed for RollCode=51137 RollNo=26030066
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:27:29.962 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:27:45.413 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 1581.7878ms - 400
+2026-04-07 14:27:49.614 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 32893.3798ms - 400
+2026-04-07 14:27:56.799 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] Failed for RollCode=71166 RollNo=26030028
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:28:20.596 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:28:21.761 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:28:23.955 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 717.545ms - 400
+2026-04-07 14:28:31.662 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 11066.7274ms - 400
+2026-04-07 14:28:36.336 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] Failed for RollCode=12201 RollNo=26010011
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:29:13.787 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:29:15.370 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:29:16.354 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 381.3508ms - 400
+2026-04-07 14:29:17.987 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 4201.2083ms - 400
+2026-04-07 14:30:03.022 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [29] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:30:03.255 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] Failed for RollCode=92200 RollNo=26010009
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:30:03.802 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [29] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:30:07.674 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [27] Received HTTP response headers after 1811.6578ms - 400
+2026-04-07 14:30:09.735 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [27] End processing HTTP request after 6711.9516ms - 400
+2026-04-07 14:30:17.731 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [27] Failed for RollCode=34453 RollNo=26010001
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:30:30.583 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:30:38.119 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:30:38.740 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [30] Received HTTP response headers after 418.2536ms - 400
+2026-04-07 14:30:39.815 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [30] End processing HTTP request after 9191.3773ms - 400
+2026-04-07 14:30:50.942 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [30] Failed for RollCode=71074 RollNo=26010003
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:31:09.848 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:31:13.171 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:31:15.240 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [29] Received HTTP response headers after 210.5035ms - 400
+2026-04-07 14:31:15.460 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [29] End processing HTTP request after 5612.2322ms - 400
+2026-04-07 14:31:17.888 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [29] Failed for RollCode=71103 RollNo=26010053
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 179
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 53
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 90
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 50
+2026-04-07 14:31:43.483 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:31:43.496 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:31:43.545 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [30] Received HTTP response headers after 44.3355ms - 400
+2026-04-07 14:31:43.548 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [30] End processing HTTP request after 64.8707ms - 400
+2026-04-07 14:32:57.406 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 14:32:57.468 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 14:32:57.542 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 14:32:57.544 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 14:32:57.545 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 14:33:00.112 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 14:33:00.472 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 369.0359ms
+2026-04-07 14:33:00.572 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 14:33:00.655 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 14:33:00.921 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 348.6399ms
+2026-04-07 14:33:01.024 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 369.3962ms
+2026-04-07 14:33:01.112 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 14:33:01.239 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.5831ms
+2026-04-07 14:33:11.652 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 14:33:11.665 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [7] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:33:11.689 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [7] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 14:33:13.942 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 14:33:13.955 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [7] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 14:33:13.971 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [7] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 2272.3089ms
+2026-04-07 14:33:13.973 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [7] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:33:13.980 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 2327.817ms
+2026-04-07 14:33:14.968 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] Total roll pairs fetched: 10
+2026-04-07 14:33:39.731 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:33:39.734 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 14:33:39.784 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [12] Received HTTP response headers after 45.7592ms - 400
+2026-04-07 14:33:39.788 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [12] End processing HTTP request after 58.9087ms - 400
+2026-04-07 14:39:39.833 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 14:39:39.964 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 14:39:40.078 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 14:39:40.080 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 14:39:40.082 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 14:39:43.305 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 14:39:43.695 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 398.1006ms
+2026-04-07 14:39:43.844 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 14:39:43.845 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 14:39:43.885 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 45.4875ms
+2026-04-07 14:39:43.977 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.0929ms
+2026-04-07 14:39:44.083 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 14:39:44.168 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.8075ms
+2026-04-07 14:39:47.668 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 14:39:47.682 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:39:47.710 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 14:39:50.554 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 14:39:50.562 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 14:39:50.576 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 2856.1039ms
+2026-04-07 14:39:50.578 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 14:39:50.582 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 2914.0206ms
+2026-04-07 14:39:51.618 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [5] Total roll pairs fetched: 10
+2026-04-07 15:03:13.095 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:03:13.146 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:03:13.282 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:03:13.322 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:03:13.338 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:03:16.941 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:03:17.450 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 537.9773ms
+2026-04-07 15:03:17.554 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:03:17.560 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:03:17.622 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 68.1267ms
+2026-04-07 15:03:17.740 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 179.8391ms
+2026-04-07 15:03:17.815 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:03:17.957 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 142.0884ms
+2026-04-07 15:03:23.803 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:03:23.812 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [9] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:03:23.840 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [9] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:03:24.051 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:03:24.054 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [9] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:03:24.071 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [9] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 219.7739ms
+2026-04-07 15:03:24.074 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [9] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:03:24.078 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 275.5022ms
+2026-04-07 15:03:25.173 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] Total roll pairs fetched: 10
+2026-04-07 15:05:15.297 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:16.233 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:16.234 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:16.241 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [12] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.945 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.947 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.950 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.952 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.956 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:18.955 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [12] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:05:19.280 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Received HTTP response headers after 314.9709ms - 400
+2026-04-07 15:05:19.280 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Received HTTP response headers after 219.887ms - 400
+2026-04-07 15:05:19.280 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Received HTTP response headers after 317.6622ms - 400
+2026-04-07 15:05:19.280 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Received HTTP response headers after 319.0014ms - 400
+2026-04-07 15:05:19.283 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [15] Received HTTP response headers after 221.8724ms - 400
+2026-04-07 15:05:19.285 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] End processing HTTP request after 4008.8139ms - 400
+2026-04-07 15:05:19.285 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] End processing HTTP request after 340.7186ms - 400
+2026-04-07 15:05:19.287 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] End processing HTTP request after 3992.0738ms - 400
+2026-04-07 15:05:19.288 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] End processing HTTP request after 4012.1222ms - 400
+2026-04-07 15:05:19.289 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [15] End processing HTTP request after 3050.7417ms - 400
+2026-04-07 15:05:49.536 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [10] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:05:49.874 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [5] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:05:49.865 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [7] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:05:50.322 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [9] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:05:49.536 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [15] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:05:59.652 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [5] [Error] RollCode=51137 RollNo=26030066
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:00.976 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [7] [Error] RollCode=91213 RollNo=26030025
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:01.533 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [9] [Error] RollCode=21137 RollNo=26030018
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:05:59.656 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=63130 RollNo=26010018
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:01.241 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [15] [Error] RollCode=71166 RollNo=26030028
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:03.397 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.304 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:03.777 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [19] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:03.777 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [20] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.489 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] Start processing HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.490 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.492 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.500 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.493 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [19] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.523 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Received HTTP response headers after 11.22ms - 400
+2026-04-07 15:06:05.524 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [15] Received HTTP response headers after 14.0231ms - 400
+2026-04-07 15:06:05.495 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [20] Sending HTTP request POST http://localhost:8091/fdb/bseb/results/query
+2026-04-07 15:06:05.538 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] End processing HTTP request after 233.6231ms - 400
+2026-04-07 15:06:05.540 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [15] End processing HTTP request after 2144.5759ms - 400
+2026-04-07 15:06:05.538 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 14.3351ms - 400
+2026-04-07 15:06:05.538 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [19] Received HTTP response headers after 11.3419ms - 400
+2026-04-07 15:06:05.548 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [10] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:06:05.559 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [15] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:06:05.561 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 72.2822ms - 400
+2026-04-07 15:06:05.747 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=34453 RollNo=26010001
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:05.771 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [18] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:06:05.567 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [19] End processing HTTP request after 1790.0142ms - 400
+2026-04-07 15:06:05.561 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [20] Received HTTP response headers after 17.8189ms - 400
+2026-04-07 15:06:05.858 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [15] [Error] RollCode=71103 RollNo=26010053
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:05.895 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [19] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:06:05.899 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [20] End processing HTTP request after 2122.2961ms - 400
+2026-04-07 15:06:06.038 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] [Error] RollCode=12201 RollNo=26010011
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:06.041 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [20] [Fluree] /query FAILED ("BadRequest"): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+2026-04-07 15:06:06.135 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [19] [Error] RollCode=71074 RollNo=26010003
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:06.267 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [20] [Error] RollCode=92200 RollNo=26010009
+System.Exception: [Fluree] /query failed (BadRequest): {"status":400,"message":"Ledger bseb/results is not found on this ledger group.","error":"db/unavailable"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:06:06.270 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [20] Batch done → Processed=0 Skipped=0 Failed=10
+2026-04-07 15:06:06.781 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [20] === Publish Complete → Total=10 Processed=0 Skipped=0 Failed=10 ===
+2026-04-07 15:14:07.527 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:14:07.621 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:14:07.701 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:14:07.711 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:14:07.719 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:14:10.716 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:14:11.750 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 1048.0538ms
+2026-04-07 15:14:11.834 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:14:11.834 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:14:11.859 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 34.4064ms
+2026-04-07 15:14:11.945 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 111.3395ms
+2026-04-07 15:14:12.047 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:14:12.100 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.0189ms
+2026-04-07 15:15:58.778 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [16] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:15:58.808 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [16] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:15:58.844 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [16] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:15:59.064 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:15:59.067 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [16] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:15:59.094 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [16] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 229.6805ms
+2026-04-07 15:15:59.096 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [16] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:15:59.100 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [16] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 322.0815ms
+2026-04-07 15:16:00.345 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] Total roll pairs fetched: 10
+2026-04-07 15:17:19.486 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.486 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.486 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [15] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.486 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.486 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.490 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.491 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.492 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [15] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.493 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:19.495 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:17:20.441 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 926.1937ms - 200
+2026-04-07 15:17:20.441 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 942.5589ms - 200
+2026-04-07 15:17:20.442 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [15] Received HTTP response headers after 928.9703ms - 200
+2026-04-07 15:17:20.450 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [15] End processing HTTP request after 6310.1975ms - 200
+2026-04-07 15:17:20.445 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 959.4133ms - 200
+2026-04-07 15:17:20.448 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 3679.4112ms - 200
+2026-04-07 15:17:20.442 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 940.9013ms - 200
+2026-04-07 15:17:20.617 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Received HTTP response headers after 1109.7256ms - 200
+2026-04-07 15:17:32.720 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 15948.2378ms - 200
+2026-04-07 15:17:38.210 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] End processing HTTP request after 21440.5598ms - 200
+2026-04-07 15:17:58.437 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:17:58.437 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [15] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:17:58.555 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:17:59.200 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [15] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:00.028 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:17:59.744 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:00.083 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:17:59.744 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:00.132 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:00.178 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:02.210 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Received HTTP response headers after 1977.3513ms - 400
+2026-04-07 15:18:02.211 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Received HTTP response headers after 2075.4359ms - 400
+2026-04-07 15:18:02.212 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Received HTTP response headers after 2177.7894ms - 400
+2026-04-07 15:18:02.213 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 2180.5564ms - 400
+2026-04-07 15:18:02.263 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 3827.5213ms - 400
+2026-04-07 15:18:02.260 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] End processing HTTP request after 2232.8123ms - 400
+2026-04-07 15:18:02.262 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] End processing HTTP request after 3825.8926ms - 400
+2026-04-07 15:18:02.440 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 2174.3887ms - 400
+2026-04-07 15:18:02.259 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] End processing HTTP request after 2515.8242ms - 400
+2026-04-07 15:18:13.570 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 13826.1105ms - 400
+2026-04-07 15:18:14.211 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [18] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:14.648 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [25] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:15.887 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [24] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:16.383 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [17] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:15.484 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [23] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:17.814 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [25] [Error] RollCode=71166 RollNo=26030028
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:23.662 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] [Error] RollCode=21137 RollNo=26030018
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:22.890 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] [Error] RollCode=91213 RollNo=26030025
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:24.439 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [24] [Error] RollCode=51137 RollNo=26030066
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:24.859 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [23] [Error] RollCode=63130 RollNo=26010018
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:28.687 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.687 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.689 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.690 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.691 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.693 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:28.731 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Received HTTP response headers after 36.9481ms - 200
+2026-04-07 15:18:28.732 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Received HTTP response headers after 35.6125ms - 200
+2026-04-07 15:18:28.733 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 21.591ms - 200
+2026-04-07 15:18:28.736 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] End processing HTTP request after 48.4981ms - 200
+2026-04-07 15:18:28.737 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] End processing HTTP request after 49.6716ms - 200
+2026-04-07 15:18:28.738 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 49.262ms - 200
+2026-04-07 15:18:29.683 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.554 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:31.083 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [25] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.558 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.558 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:31.558 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.559 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:31.563 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:18:31.562 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.561 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [25] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:31.612 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 37.837ms - 200
+2026-04-07 15:18:31.616 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Received HTTP response headers after 34.9386ms - 200
+2026-04-07 15:18:31.642 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 87.7769ms - 200
+2026-04-07 15:18:31.646 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] End processing HTTP request after 87.6099ms - 200
+2026-04-07 15:18:31.830 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 265.2454ms - 400
+2026-04-07 15:18:32.779 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:32.561 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [18] Received HTTP response headers after 938.5613ms - 400
+2026-04-07 15:18:31.833 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Received HTTP response headers after 223.5819ms - 400
+2026-04-07 15:18:32.782 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [23] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:32.783 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 3099.6021ms - 400
+2026-04-07 15:18:32.787 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:32.789 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [18] End processing HTTP request after 1706.1568ms - 400
+2026-04-07 15:18:32.795 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [17] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:32.791 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] End processing HTTP request after 1233.4985ms - 400
+2026-04-07 15:18:32.806 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [18] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:32.862 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [24] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:32.793 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [23] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:18:33.141 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 342.9448ms - 400
+2026-04-07 15:18:33.180 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Received HTTP response headers after 139.0371ms - 400
+2026-04-07 15:18:33.339 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 560.0389ms - 400
+2026-04-07 15:18:33.305 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] [Error] RollCode=92200 RollNo=26010009
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:33.371 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [24] [Error] RollCode=71074 RollNo=26010003
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:33.396 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [18] [Error] RollCode=71103 RollNo=26010053
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:33.397 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] End processing HTTP request after 614.7588ms - 400
+2026-04-07 15:18:33.399 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [13] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:33.410 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [16] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+2026-04-07 15:18:33.545 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] [Error] RollCode=12201 RollNo=26010011
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:33.624 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] [Error] RollCode=34453 RollNo=26010001
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"Predicate does not exist: :BSEB_FinalPublishedResult/log_id","error":"db/invalid-tx"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.TransactAsync(Object transaction) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 191
+   at BSEBResultBlockchainAPI.Services.FlureeService.SaveNewRecordAsync(String rollCode, String rollNo, String encryptedData) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 124
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 138
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:18:33.632 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] Batch done → Processed=0 Skipped=0 Failed=10
+2026-04-07 15:18:34.149 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] === Publish Complete → Total=10 Processed=0 Skipped=0 Failed=10 ===
+2026-04-07 15:20:36.544 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:20:36.595 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:20:36.877 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:20:36.878 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:20:36.879 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:20:41.190 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:20:41.697 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 519.0175ms
+2026-04-07 15:20:41.957 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:20:41.957 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:20:42.197 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 233.7515ms
+2026-04-07 15:20:42.263 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 305.1302ms
+2026-04-07 15:20:42.324 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:20:42.380 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.2811ms
+2026-04-07 15:20:48.355 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:20:48.373 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:20:48.412 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:20:48.641 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:20:48.644 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:20:48.658 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 236.9343ms
+2026-04-07 15:20:48.661 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:20:48.666 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 311.5992ms
+2026-04-07 15:20:49.772 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Total roll pairs fetched: 10
+2026-04-07 15:21:29.933 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.933 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.930 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.933 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.938 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.942 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.942 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.944 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.945 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:29.943 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:30.113 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Received HTTP response headers after 150.0905ms - 404
+2026-04-07 15:21:30.117 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Received HTTP response headers after 46.5811ms - 404
+2026-04-07 15:21:30.145 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] End processing HTTP request after 211.4126ms - 404
+2026-04-07 15:21:30.113 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 160.6996ms - 404
+2026-04-07 15:21:30.113 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [21] Received HTTP response headers after 132.6164ms - 404
+2026-04-07 15:21:30.154 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] End processing HTTP request after 226.8036ms - 404
+2026-04-07 15:21:30.147 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Received HTTP response headers after 28.9291ms - 404
+2026-04-07 15:21:30.164 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 228.4369ms - 404
+2026-04-07 15:21:34.773 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [7] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:34.808 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [9] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:32.545 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] End processing HTTP request after 2615.2026ms - 404
+2026-04-07 15:21:37.584 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [13] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:30.170 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [21] End processing HTTP request after 236.6059ms - 404
+2026-04-07 15:21:38.651 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [21] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:39.020 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [7] [Error] RollCode=63130 RollNo=26010018
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:39.020 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [9] [Error] RollCode=51137 RollNo=26030066
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:39.021 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [10] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:39.196 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] [Error] RollCode=21137 RollNo=26030018
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:39.229 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [21] [Error] RollCode=71166 RollNo=26030028
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:43.725 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=91213 RollNo=26030025
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:50.694 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:52.059 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:52.710 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:52.691 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.363 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.360 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.373 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.372 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Received HTTP response headers after 5.8898ms - 404
+2026-04-07 15:21:54.376 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Received HTTP response headers after 1.245ms - 404
+2026-04-07 15:21:54.376 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.360 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [21] Start processing HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.384 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] End processing HTTP request after 2324.5224ms - 404
+2026-04-07 15:21:54.379 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Received HTTP response headers after 1.4587ms - 404
+2026-04-07 15:21:54.380 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] End processing HTTP request after 3686.938ms - 404
+2026-04-07 15:21:54.388 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Received HTTP response headers after 1.5473ms - 404
+2026-04-07 15:21:54.388 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [21] Sending HTTP request POST http://localhost:8091/transact/fdb/ssb/bsebresult26/query
+2026-04-07 15:21:54.390 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [5] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:54.391 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] End processing HTTP request after 1700.141ms - 404
+2026-04-07 15:21:54.393 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] End processing HTTP request after 32.5097ms - 404
+2026-04-07 15:21:54.392 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [10] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:54.396 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 1.9308ms - 404
+2026-04-07 15:21:54.503 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [5] [Error] RollCode=71074 RollNo=26010003
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:54.503 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [7] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:54.504 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [9] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:54.605 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=12201 RollNo=26010011
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:54.715 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [7] [Error] RollCode=71103 RollNo=26010053
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:54.605 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 244.3166ms - 404
+2026-04-07 15:21:54.822 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [9] [Error] RollCode=92200 RollNo=26010009
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:54.826 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [13] [Fluree] /query FAILED ("NotFound"): Not found
+2026-04-07 15:21:54.917 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] [Error] RollCode=34453 RollNo=26010001
+System.Exception: [Fluree] /query failed (NotFound): Not found
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 215
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:21:54.920 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Batch done → Processed=0 Skipped=0 Failed=10
+2026-04-07 15:21:55.433 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] === Publish Complete → Total=10 Processed=0 Skipped=0 Failed=10 ===
+2026-04-07 15:27:25.781 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:27:25.832 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:27:25.888 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:27:25.889 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:27:25.890 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:27:28.400 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:27:28.736 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 344.9374ms
+2026-04-07 15:27:28.899 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:27:28.947 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 48.2517ms
+2026-04-07 15:27:28.968 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:27:29.152 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 183.8519ms
+2026-04-07 15:27:29.212 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:27:29.309 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.0571ms
+2026-04-07 15:27:38.082 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:27:38.096 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:27:38.125 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:27:38.346 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:27:38.348 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [5] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:27:38.362 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 226.2754ms
+2026-04-07 15:27:38.364 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:27:38.368 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 286.3996ms
+2026-04-07 15:27:39.953 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Total roll pairs fetched: 10
+2026-04-07 15:29:20.551 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:29:20.608 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:29:20.657 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:29:20.658 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:29:20.659 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:29:23.298 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:29:23.671 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 381.9628ms
+2026-04-07 15:29:23.801 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:29:23.812 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:29:23.828 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 27.5962ms
+2026-04-07 15:29:23.922 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.9734ms
+2026-04-07 15:29:24.033 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:29:24.064 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.8998ms
+2026-04-07 15:29:30.935 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:29:30.947 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:29:30.976 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:29:31.193 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:29:31.197 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [5] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:29:31.212 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 228.014ms
+2026-04-07 15:29:31.213 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:29:31.217 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 282.551ms
+2026-04-07 15:29:32.277 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Total roll pairs fetched: 10
+2026-04-07 15:30:18.339 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:30:18.556 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:30:18.601 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:30:18.603 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:30:18.604 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:30:19.896 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:30:20.192 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 305.328ms
+2026-04-07 15:30:21.886 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:30:21.886 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:30:21.903 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 17.627ms
+2026-04-07 15:30:21.991 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.871ms
+2026-04-07 15:30:22.035 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:30:22.063 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.7021ms
+2026-04-07 15:30:46.026 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:30:46.048 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:30:46.073 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:30:46.217 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:30:46.220 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:30:46.247 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 159.855ms
+2026-04-07 15:30:46.249 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:30:46.252 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 226.0324ms
+2026-04-07 15:30:47.186 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] Total roll pairs fetched: 10
+2026-04-07 15:31:19.594 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:19.595 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:19.595 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.170 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.170 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [22] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.177 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.177 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.178 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.180 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.181 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [22] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:31:23.354 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 169.3081ms - 400
+2026-04-07 15:31:23.358 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Received HTTP response headers after 173.7065ms - 400
+2026-04-07 15:31:23.358 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 67.5079ms - 400
+2026-04-07 15:31:23.364 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] End processing HTTP request after 4804.3969ms - 400
+2026-04-07 15:31:23.365 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [22] Received HTTP response headers after 167.7277ms - 400
+2026-04-07 15:31:23.368 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Received HTTP response headers after 58.0463ms - 400
+2026-04-07 15:31:23.366 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 4805.6185ms - 400
+2026-04-07 15:31:23.367 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 197.6272ms - 400
+2026-04-07 15:31:23.380 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [22] End processing HTTP request after 4820.5331ms - 400
+2026-04-07 15:31:23.771 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] End processing HTTP request after 600.9981ms - 400
+2026-04-07 15:31:59.462 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [13] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:31:59.463 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [16] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:00.175 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [17] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:31:59.223 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [22] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:01.718 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [7] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:02.863 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [22] [Error] RollCode=51137 RollNo=26030066
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:07.324 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] [Error] RollCode=21137 RollNo=26030018
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:07.739 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [7] [Error] RollCode=71166 RollNo=26030028
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:06.707 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] [Error] RollCode=91213 RollNo=26030025
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:07.069 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] [Error] RollCode=63130 RollNo=26010018
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:09.066 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.630 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:09.626 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [27] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:09.628 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [28] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.955 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [26] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.956 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.958 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.963 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [26] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.959 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [27] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.960 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [28] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:32:10.976 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [13] Received HTTP response headers after 9.4371ms - 400
+2026-04-07 15:32:10.976 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Received HTTP response headers after 11.1206ms - 400
+2026-04-07 15:32:10.979 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [24] Received HTTP response headers after 10.268ms - 400
+2026-04-07 15:32:10.980 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [26] Received HTTP response headers after 3.4723ms - 400
+2026-04-07 15:32:10.983 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [13] End processing HTTP request after 352.6309ms - 400
+2026-04-07 15:32:10.984 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [28] Received HTTP response headers after 2.9973ms - 400
+2026-04-07 15:32:10.984 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] End processing HTTP request after 2308.763ms - 400
+2026-04-07 15:32:10.985 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [24] End processing HTTP request after 30.3529ms - 400
+2026-04-07 15:32:10.987 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [26] End processing HTTP request after 1360.3616ms - 400
+2026-04-07 15:32:10.992 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [13] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:10.993 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [28] End processing HTTP request after 1364.5674ms - 400
+2026-04-07 15:32:10.999 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [26] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:10.995 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [17] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:11.119 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] [Error] RollCode=12201 RollNo=26010011
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:10.996 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [24] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:11.251 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [26] [Error] RollCode=71074 RollNo=26010003
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:11.301 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] [Error] RollCode=71103 RollNo=26010053
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:11.032 [ERR] [BSEBResultBlockchainAPI.Services.FlureeService] [28] [Fluree] /transact FAILED ("BadRequest"): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+2026-04-07 15:32:11.423 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [24] [Error] RollCode=34453 RollNo=26010001
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:11.557 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [28] [Error] RollCode=92200 RollNo=26010009
+System.Exception: [Fluree] /transact failed (BadRequest): {"status":400,"message":"A transaction submitted to the 'transact' endpoint must be a list/vector/array.","error":"db/invalid-transaction"}
+   at BSEBResultBlockchainAPI.Services.FlureeService.PostFlureeAsync(String endpoint, Object payload) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 217
+   at BSEBResultBlockchainAPI.Services.FlureeService.GetByRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\FlureeService.cs:line 52
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 132
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_1.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 71
+2026-04-07 15:32:11.561 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [28] Batch done → Processed=0 Skipped=0 Failed=10
+2026-04-07 15:32:28.336 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:32:28.370 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:32:28.410 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:32:28.412 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:32:28.412 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:32:30.730 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:32:31.232 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 509.8996ms
+2026-04-07 15:32:31.324 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:32:31.325 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:32:31.412 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 87.9125ms
+2026-04-07 15:32:31.475 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.4009ms
+2026-04-07 15:32:31.527 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:32:31.576 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.5676ms
+2026-04-07 15:32:35.713 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:32:35.727 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [7] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:32:35.746 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [7] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:32:35.897 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:32:35.899 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [7] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:32:35.915 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [7] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 162.6302ms
+2026-04-07 15:32:35.917 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [7] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:32:35.921 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 208.4293ms
+2026-04-07 15:32:36.869 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] Total roll pairs fetched: 2
+2026-04-07 15:33:20.283 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [12] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:33:20.283 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [10] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:33:20.288 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [12] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:33:20.290 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [10] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:33:20.363 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [19] Received HTTP response headers after 66.9ms - 400
+2026-04-07 15:33:20.363 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [20] Received HTTP response headers after 68.667ms - 400
+2026-04-07 15:33:20.366 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [19] End processing HTTP request after 90.8305ms - 400
+2026-04-07 15:33:20.367 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [20] End processing HTTP request after 91.8653ms - 400
+2026-04-07 15:34:23.326 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:34:23.363 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:34:23.417 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:34:23.419 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:34:23.421 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:34:25.763 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:34:26.162 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 403.7349ms
+2026-04-07 15:34:26.211 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:34:26.211 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:34:26.248 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 36.9775ms
+2026-04-07 15:34:26.351 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 141.5826ms
+2026-04-07 15:34:26.443 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:34:26.484 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.1143ms
+2026-04-07 15:34:34.733 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:34:34.745 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [12] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:34:34.775 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [12] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:34:35.000 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:34:35.004 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [12] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:34:35.020 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [12] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 233.4975ms
+2026-04-07 15:34:35.024 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [12] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:34:35.028 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [12] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 295.3111ms
+2026-04-07 15:34:36.074 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [12] Total roll pairs fetched: 2
+2026-04-07 15:34:54.004 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [12] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:34:54.004 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:34:54.008 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [12] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:34:54.008 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:34:54.216 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Received HTTP response headers after 202.5388ms - 200
+2026-04-07 15:34:54.216 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Received HTTP response headers after 201.0739ms - 200
+2026-04-07 15:34:54.219 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] End processing HTTP request after 216.3942ms - 200
+2026-04-07 15:34:54.221 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] End processing HTTP request after 218.3244ms - 200
+2026-04-07 15:36:04.008 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [7] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:36:04.682 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:36:04.685 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [7] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:36:04.687 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:36:05.039 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [9] Received HTTP response headers after 350.9693ms - 400
+2026-04-07 15:36:05.046 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [9] End processing HTTP request after 1038.0168ms - 400
+2026-04-07 15:38:10.383 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:38:10.433 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:38:10.501 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:38:10.503 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:38:10.506 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:38:12.859 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:38:13.303 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 462.2054ms
+2026-04-07 15:38:15.337 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:38:15.337 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:38:15.377 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 40.5964ms
+2026-04-07 15:38:15.462 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.6129ms
+2026-04-07 15:38:15.534 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:38:15.590 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.3676ms
+2026-04-07 15:39:02.895 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:39:02.909 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:39:02.949 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:39:03.171 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:39:03.174 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [5] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:39:03.186 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [5] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 230.1251ms
+2026-04-07 15:39:03.189 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [5] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:39:03.194 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 299.0299ms
+2026-04-07 15:39:04.309 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [17] Total roll pairs fetched: 2
+2026-04-07 15:39:18.715 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [16] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:39:18.715 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [17] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:39:18.720 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [16] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:39:18.721 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [17] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/query
+2026-04-07 15:39:18.815 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [14] Received HTTP response headers after 89.4128ms - 200
+2026-04-07 15:39:18.815 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Received HTTP response headers after 90.7558ms - 200
+2026-04-07 15:39:18.818 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [14] End processing HTTP request after 105.0826ms - 200
+2026-04-07 15:39:18.824 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] End processing HTTP request after 110.7908ms - 200
+2026-04-07 15:39:59.889 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [14] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:40:00.490 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [5] Start processing HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:40:00.493 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [14] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:40:00.496 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [5] Sending HTTP request POST http://localhost:8091/fdb/ssb/bsebresult26/transact
+2026-04-07 15:40:00.953 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [14] Received HTTP response headers after 452.3989ms - 200
+2026-04-07 15:40:00.960 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [14] End processing HTTP request after 470.1068ms - 200
+2026-04-07 15:40:01.254 [INF] [System.Net.Http.HttpClient.FlureeClient.ClientHandler] [21] Received HTTP response headers after 757.1237ms - 200
+2026-04-07 15:40:04.826 [INF] [System.Net.Http.HttpClient.FlureeClient.LogicalHandler] [21] End processing HTTP request after 4936.9275ms - 200
+2026-04-07 15:40:05.083 [INF] [BSEBResultBlockchainAPI.Services.FlureeService] [14] [Fluree] INSERT → rollcode=91213 rollnumber=26030025
+2026-04-07 15:40:05.087 [INF] [BSEBResultBlockchainAPI.Services.FlureeService] [21] [Fluree] INSERT → rollcode=21137 rollnumber=26030018
+2026-04-07 15:40:05.963 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [21] [INSERT] New record → rollcode=21137 rollnumber=26030018
+2026-04-07 15:40:05.964 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [14] [INSERT] New record → rollcode=91213 rollnumber=26030025
+2026-04-07 15:40:11.724 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [14] Batch done → Processed=2 Skipped=0 Failed=0
+2026-04-07 15:40:17.658 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [14] === Publish Complete → Total=2 Processed=2 Skipped=0 Failed=0 ===
+2026-04-07 15:57:52.333 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 15:57:52.389 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 15:57:52.803 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 15:57:52.808 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 15:57:52.809 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 15:57:55.660 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 15:57:56.334 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 689.0549ms
+2026-04-07 15:57:56.441 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 15:57:56.441 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 15:57:56.515 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 74.0908ms
+2026-04-07 15:57:56.677 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 235.9922ms
+2026-04-07 15:57:56.994 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 15:57:57.184 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.49ms
+2026-04-07 15:58:06.892 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 15:58:06.937 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [9] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:58:06.968 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [9] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 15:58:07.230 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 15:58:07.234 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [9] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 15:58:07.246 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [9] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 271.5435ms
+2026-04-07 15:58:07.249 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [9] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 15:58:07.253 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 360.5317ms
+2026-04-07 15:58:09.121 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] Total roll pairs fetched: 1
+2026-04-07 16:40:34.803 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 16:40:34.867 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 16:40:34.984 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 16:40:34.985 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 16:40:34.987 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 16:40:38.474 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 16:40:38.868 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 397.3878ms
+2026-04-07 16:40:38.944 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 16:40:38.944 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 16:40:39.088 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 144.0483ms
+2026-04-07 16:40:39.152 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 207.6794ms
+2026-04-07 16:40:39.240 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 16:40:39.270 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.0433ms
+2026-04-07 16:40:51.208 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 16:40:51.219 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:40:51.251 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 16:40:51.480 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 16:40:51.487 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 16:40:51.504 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 240.9794ms
+2026-04-07 16:40:51.506 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:40:51.511 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 302.7022ms
+2026-04-07 16:40:53.385 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] Total roll pairs fetched: 1
+2026-04-07 16:40:53.696 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=34453 RollNo=26010001
+System.IndexOutOfRangeException: SN
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 170
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_2.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 65
+2026-04-07 16:40:53.712 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] Batch done → Processed=0 Skipped=0 Failed=1
+2026-04-07 16:40:54.225 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Publish Complete → Total=1 Processed=0 Skipped=0 Failed=1 ===
+2026-04-07 16:41:03.339 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 16:41:03.344 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:41:03.349 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 16:41:03.364 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 16:41:03.363 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [9] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 16:41:03.370 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 16.2389ms
+2026-04-07 16:41:03.377 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:41:03.379 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 40.3847ms
+2026-04-07 16:41:04.152 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Total roll pairs fetched: 1
+2026-04-07 16:41:04.370 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] [Error] RollCode=34453 RollNo=26010001
+System.IndexOutOfRangeException: SN
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 170
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_2.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 65
+2026-04-07 16:41:04.373 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] Batch done → Processed=0 Skipped=0 Failed=1
+2026-04-07 16:41:04.881 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Publish Complete → Total=1 Processed=0 Skipped=0 Failed=1 ===
+2026-04-07 16:41:36.260 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 16:41:36.313 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 16:41:36.375 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 16:41:36.377 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 16:41:36.378 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 16:41:38.659 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 16:41:38.958 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 305.2041ms
+2026-04-07 16:41:39.022 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 16:41:39.022 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [7] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 16:41:39.045 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 22.3133ms
+2026-04-07 16:41:39.145 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [11] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.0056ms
+2026-04-07 16:41:39.213 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [11] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 16:41:39.276 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [11] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.6831ms
+2026-04-07 16:41:46.526 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [11] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 16:41:46.538 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [11] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:41:46.562 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [11] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 16:41:46.788 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 16:41:46.791 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [11] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 16:41:46.804 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [11] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 234.5226ms
+2026-04-07 16:41:46.808 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [11] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:41:46.811 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [11] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 285.9221ms
+2026-04-07 16:41:48.841 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [11] Total roll pairs fetched: 1
+2026-04-07 16:41:49.122 [ERR] [BSEBResultBlockchainAPI.Services.ResultPublishService] [11] [Error] RollCode=12201 RollNo=26010011
+System.IndexOutOfRangeException: SN
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.ProcessSingleRollAsync(String rollCode, String rollNo) in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 170
+   at BSEBResultBlockchainAPI.Services.ResultPublishService.<>c__DisplayClass11_2.<<PublishAllResultsAsync>b__4>d.MoveNext() in C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI\Services\ResultPublishService.cs:line 65
+2026-04-07 16:41:49.137 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [11] Batch done → Processed=0 Skipped=0 Failed=1
+2026-04-07 16:41:49.648 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [11] === Publish Complete → Total=1 Processed=0 Skipped=0 Failed=1 ===
+2026-04-07 16:42:10.542 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 16:42:10.606 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 16:42:10.698 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 16:42:10.712 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 16:42:10.718 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 16:42:13.103 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 16:42:13.424 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 329.2203ms
+2026-04-07 16:42:15.403 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 16:42:15.406 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 16:42:15.494 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 91.281ms
+2026-04-07 16:42:15.568 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 161.7913ms
+2026-04-07 16:42:15.612 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 16:42:15.638 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.8173ms
+2026-04-07 16:42:18.243 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 16:42:18.262 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:42:18.283 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 16:42:18.450 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [10] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 16:42:18.453 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [13] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 16:42:18.473 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [13] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 173.7659ms
+2026-04-07 16:42:18.478 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [13] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:42:18.531 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 287.7433ms
+2026-04-07 16:42:20.461 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [13] Total roll pairs fetched: 1
+2026-04-07 16:43:22.224 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: https://localhost:7171
+2026-04-07 16:43:22.271 [INF] [Microsoft.Hosting.Lifetime] [1] Now listening on: http://localhost:5080
+2026-04-07 16:43:22.317 [INF] [Microsoft.Hosting.Lifetime] [1] Application started. Press Ctrl+C to shut down.
+2026-04-07 16:43:22.319 [INF] [Microsoft.Hosting.Lifetime] [1] Hosting environment: Development
+2026-04-07 16:43:22.320 [INF] [Microsoft.Hosting.Lifetime] [1] Content root path: C:\Jinal\Git\BSEBResultBlockchainAPI\BSEBResultBlockchainAPI
+2026-04-07 16:43:24.551 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2026-04-07 16:43:25.094 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 551ms
+2026-04-07 16:43:25.286 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-07 16:43:25.304 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16531 application/javascript; charset=utf-8 17.9194ms
+2026-04-07 16:43:25.555 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [5] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2026-04-07 16:43:25.668 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [9] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.3293ms
+2026-04-07 16:43:25.752 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2026-04-07 16:43:25.772 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [13] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.2132ms
+2026-04-07 16:43:57.131 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request starting HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - null 0
+2026-04-07 16:43:57.152 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [10] Executing endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:43:57.174 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [10] Route matched with {action = "PublishAll", controller = "ResultPublish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PublishAll() on controller BSEBResultBlockchainAPI.Controllers.ResultPublishController (BSEBResultBlockchainAPI).
+2026-04-07 16:43:57.422 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] === Starting BSEB Result Blockchain Publish ===
+2026-04-07 16:43:57.426 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [10] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-07 16:43:57.440 [INF] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [10] Executed action BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI) in 259.9364ms
+2026-04-07 16:43:57.442 [INF] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [10] Executed endpoint 'BSEBResultBlockchainAPI.Controllers.ResultPublishController.PublishAll (BSEBResultBlockchainAPI)'
+2026-04-07 16:43:57.448 [INF] [Microsoft.AspNetCore.Hosting.Diagnostics] [10] Request finished HTTP/2 POST https://localhost:7171/api/ResultPublish/publish-all - 202 null application/json; charset=utf-8 317.0521ms
+2026-04-07 16:43:59.172 [INF] [BSEBResultBlockchainAPI.Services.ResultPublishService] [16] Total roll pairs fetched: 1
