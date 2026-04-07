@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BSEBResultBlockchainAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4298727a731b56799e4ceb1989d3d145f92f0b1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BSEBResultBlockchainAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BSEBResultBlockchainAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

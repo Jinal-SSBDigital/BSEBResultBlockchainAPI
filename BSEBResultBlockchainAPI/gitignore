@@ -1,0 +1,126 @@
+# =========================
+# Build folders
+# =========================
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# =========================
+# Visual Studio / IDE
+# =========================
+.vs/
+.vscode/
+.idea/
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Visual Studio cache/index
+*.vsidx
+*.vspscc
+*.vssscc
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ASP.NET Core configs
+# =========================
+# Keep main config
+!appsettings.json
+
+# Ignore environment-specific configs
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
+# Secrets
+secrets.json
+.env
+
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Publish / Deployment
+# =========================
+publish/
+*.pubxml
+*.publishproj
+*.azurePubxml
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# =========================
+# Database files
+# =========================
+*.mdf
+*.ldf
+*.ndf
+
+# =========================
+# Test Results
+# =========================
+TestResults/
+*.trx
+*.coverage
+
+# =========================
+# Resharper / Rider
+# =========================
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+# Backup / temp files
+# =========================
+*.bak
+*.tmp
+*.temp
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Generated files
+# =========================
+Generated_Code/
+
+# =========================
+# Misc
+# =========================
+*.cache
+*.pdb
+*.dbmdl
+*.jfm
+*.publishsettings
