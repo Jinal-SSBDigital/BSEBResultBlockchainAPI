@@ -80,5 +80,53 @@ namespace BSEBResultBlockchainAPI.Helpers
             // Remove padding bytes
             return result.Take(result.Count - padding).ToArray();
         }
+
+        public static object? DecryptStudentData(string encrypted)
+        {
+            try
+            {
+                var json = DecodeBase85ToString(encrypted);
+
+                // Step 1: Trim unwanted chars
+                json = json.Trim();
+
+                // Step 2: Remove trailing garbage like '|'
+                json = json.TrimEnd('|');
+
+                // Step 3: FIX broken JSON structure
+                json = FixJson(json);
+
+                return JsonSerializer.Deserialize<object>(json, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Decryption failed", ex);
+            }
+        }
+
+        private static string FixJson(string json)
+        {
+            int openCurly = json.Count(c => c == '{');
+            int closeCurly = json.Count(c => c == '}');
+
+            int openSquare = json.Count(c => c == '[');
+            int closeSquare = json.Count(c => c == ']');
+
+            // Add missing closing brackets
+            if (closeSquare < openSquare)
+            {
+                json += new string(']', openSquare - closeSquare);
+            }
+
+            if (closeCurly < openCurly)
+            {
+                json += new string('}', openCurly - closeCurly);
+            }
+
+            return json;
+        }
     }
 }
