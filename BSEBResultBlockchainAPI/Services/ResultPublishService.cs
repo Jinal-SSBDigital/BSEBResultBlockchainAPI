@@ -134,9 +134,7 @@ namespace BSEBResultBlockchainAPI.Services
                     // Fluree will store: encrypteddata = '["ENC_v1"]'
                     await _flureeService.SaveNewRecordAsync(rollCode, rollNo, encrypted);
 
-                    _logger.LogInformation(
-                        "[INSERT] New record → rollcode={RollCode} rollnumber={RollNo}",
-                        rollCode, rollNo);
+                    _logger.LogInformation("[INSERT] New record → rollcode={RollCode} rollnumber={RollNo}", rollCode, rollNo);
 
                     return ProcessResult.Processed;
                 }
