@@ -9,5 +9,6 @@ namespace BSEBResultBlockchainAPI.Services.Interfaces
 
         // Takes full existing record so we can append without a second round-trip
         Task AppendEncryptedVersionAsync(FlureeResultRecord existing, string newEncryptedData);
+        Task<object?> GetDecryptedLatestAsync(string rollCode, string rollNo);
     }
 }
