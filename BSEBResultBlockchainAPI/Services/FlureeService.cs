@@ -1,4 +1,5 @@
-﻿using BSEBResultBlockchainAPI.Models;
+﻿using BSEBResultBlockchainAPI.Helpers;
+using BSEBResultBlockchainAPI.Models;
 using BSEBResultBlockchainAPI.Services.Interfaces;
 using System.Text;
 using System.Text.Json;
@@ -184,9 +185,7 @@ namespace BSEBResultBlockchainAPI.Services
         {
             return el.ValueKind switch
             {
-                JsonValueKind.Number => DateTimeOffset
-                    .FromUnixTimeMilliseconds(el.GetInt64())
-                    .UtcDateTime,
+                JsonValueKind.Number => DateTimeOffset.FromUnixTimeMilliseconds(el.GetInt64()).UtcDateTime,
 
                 JsonValueKind.String => DateTime.Parse(el.GetString()!),
 
@@ -222,9 +221,7 @@ namespace BSEBResultBlockchainAPI.Services
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    _logger.LogError(
-                        "[Fluree] {Endpoint} FAILED ({Status}): {Body}",
-                        endpoint, response.StatusCode, body);
+                    _logger.LogError("[Fluree] {Endpoint} FAILED ({Status}): {Body}",endpoint, response.StatusCode, body);
 
                     throw new Exception($"[Fluree] {endpoint} failed ({response.StatusCode}): {body}");
                 }
@@ -237,6 +234,18 @@ namespace BSEBResultBlockchainAPI.Services
                 throw ex;
             }
             
+        }
+
+        public async Task<object?> GetDecryptedLatestAsync(string rollCode, string rollNo)
+        {
+            var record = await GetByRollAsync(rollCode, rollNo);
+
+            if (record == null || record.EncryptedData.Count == 0)
+                return null;
+
+            var latestEncrypted = record.EncryptedData.Last();
+
+            return QrUtility.DecryptStudentData(latestEncrypted);
         }
     }
 }
