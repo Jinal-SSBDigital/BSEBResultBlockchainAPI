@@ -1,4 +1,5 @@
-﻿using BSEBResultBlockchainAPI.Services;
+﻿using BSEBResultBlockchainAPI.Helpers;
+using BSEBResultBlockchainAPI.Services;
 using BSEBResultBlockchainAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +32,8 @@ namespace BSEBResultBlockchainAPI.Controllers
         {
             try
             {
-                var result = await _flureeService.GetDecryptedLatestAsync(rollCode, rollNo);
+                var result = await _flureeService.GetDecryptedAllWithVersionAsync(rollCode, rollNo);
+                //var result = await _flureeService.GetDecryptedLatestAsync(rollCode, rollNo);
 
                 if (result == null)
                     return NotFound(new { message = "Record not found or empty" });
@@ -42,6 +44,28 @@ namespace BSEBResultBlockchainAPI.Controllers
             {
                 return StatusCode(500, new { message = ex.Message });
             }
+        }
+
+        [HttpPost("decryptString")]
+        public IActionResult DecryptString([FromBody] string encryptedWrapper)
+        {
+            try
+            {
+                var result = QrUtility.DecryptStringData(encryptedWrapper);
+
+                if (result == null)
+                    return NotFound(new { message = "Invalid or empty data" });
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+        public class DecryptRequest
+        {
+            public string EncryptedData { get; set; }
         }
     }
 }
