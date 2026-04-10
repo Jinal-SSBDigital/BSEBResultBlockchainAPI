@@ -139,26 +139,34 @@ namespace BSEBResultBlockchainAPI.Services
                     return ProcessResult.Processed;
                 }
 
-                // ── Step 4: Record exists — check if data actually changed ────────────
-                var latestVersion = existing.EncryptedData.LastOrDefault();
+                //// ── Step 4: Record exists — check if data actually changed ────────────
+                //var latestVersion = existing.EncryptedData.LastOrDefault();
 
-                if (latestVersion == encrypted)
+                //if (latestVersion == encrypted)
+                //{
+                //    // ✅ CASE B: Encrypted string unchanged — no scrutiny changes, skip
+                //    _logger.LogDebug(
+                //        "[Skip] No change detected → rollcode={RollCode} rollnumber={RollNo}",
+                //        rollCode, rollNo);
+
+                //    return ProcessResult.Skipped;
+                //}
+                var lastEntry = existing.EncryptedData.LastOrDefault();
+                string? latestValue = lastEntry?.Values.FirstOrDefault();
+
+                if (latestValue == encrypted)
                 {
-                    // ✅ CASE B: Encrypted string unchanged — no scrutiny changes, skip
-                    _logger.LogDebug(
-                        "[Skip] No change detected → rollcode={RollCode} rollnumber={RollNo}",
-                        rollCode, rollNo);
+                    _logger.LogDebug("[Skip] No change detected → rollcode={RollCode} rollnumber={RollNo}",rollCode, rollNo);
 
                     return ProcessResult.Skipped;
                 }
-
                 // ✅ CASE C: Data changed (scrutiny/correction applied) → APPEND new version
                 // Fluree will store: encrypteddata = '["ENC_v1","ENC_v2"]' or '["ENC_v1","ENC_v2","ENC_v3"]' etc.
+                //string encrypted1 = "dm?jmVRUtKB04cFB589&Lq$zta%*!UIxs9Ea&K&GLvLhdB03^DGBPkQA}k_uZ)|K%Zz4J(GBz+VFfcGVA}k_eb7f*xZfS9KWl2OLIwCSMG%+zUFfcGMG&UkEB4lr3B03^6FfcbQF)=MLGE^`yIxsLgFfbx4B6DscIwDO(AVxt_NI^~@RzXrpQz9%PW^N)nB27dfRzXrpQz9%PZEhkuB3eO6Nkl;)S3y!qQz9%PV{B(`VQpn1IwDm=NJB^<O+iFRSwT%nOCVNBL|H*hL0Lf{LP1PdK|xe3AVE?=Qb|D~EFyAcXKrsIIwDdnIWjUZFfcGNH!U(WA}k_iVPkb{ba^5=B2z<2MNUISA}k_wZ**a7L1$-8VRCD8B03^7GdLh1C{$>2Wn~~pb#7#GWn>^!XlZhEc_2k;XJ~XOA}k_wZ**a7L1$-IZ*pXFB03^eXmVv`AV_s?WO8L>AXI2+a&&nhMQLYfbRsMwWNCJ3b7^mGB03^5b95j?X?AIIX>V>KEFyDtVrpe$bW&w=b!>EVB05`pB6D?OB03^PZf9(1b7&$gB5h%KO<{6tB04cJFf1Z)VRLg$VRCCCIx{dVB6MhFZ*qAeIwCkVA}k_rLSIl)B03@>EFx!eLtj)#Pa--ZFd{4>XL3VdP*Nf~A}}H>B4cA^O<{6tb0Rt-A}k_wZ*)_2Vj?;sH#HzcA}k_vbz*8|V{}JyZ*_1^VQpn1IwCPHAY64YIWRR`buc+HI9zowIWtCFbuc+IHC%NtIWt9Ebuc+IFkE#oIW$CEbuc+HMj%6PZE$sLb8m8aB7H1-B6D?OB03^fa%6QPEFx`Tcuiq)Ya%)^Ffc44aA9+EO<{6tB04iLEFyGhWp8qMB03^BI3g?}Z$e*CQX)DcA}k_jazkHKNKYa<A}}H>B4=_#Ur<saIwCM4EFxoLWldpnYjYwxA|fmzbZ>N1bz&kqA~!f7L?SFAb9G{BWn*+la&L8TPGN0jB03^5E+AZWFgY+aTy-!xGB{jyFgY_uTy-!xGc{awFgY_tTy-!xGca6rFgY|tTy-!xGDaXnZ*6dOY;$jNc_Mu*dm?jnVj?;sP-uB`X=8IDEFx`Tcuiq)Ya%)^Ffc44aA9+EO<{6tB04iOEFyGhWp8qMB03^7I3g?}Z$e*CQX)DcGB_eEB4=_#UsOm>B03^4A}k_jazkHGQX)DcFd{4>V`F7aVRCD8B03@>EFyGobW?R=B03^AHX<w{b9G{BWn*+la&L8TPGN0jB03^6E+AZWFgY<WTy-!xF+p5)FgY|tTy-!xF+yB*FgY_uE-o$";
                 await _flureeService.AppendEncryptedVersionAsync(existing, encrypted);
+                //await _flureeService.AppendEncryptedVersionAsync(existing, encrypted);
 
-                _logger.LogInformation(
-                    "[APPEND] Version {Version} added → rollcode={RollCode} rollnumber={RollNo}",
-                    existing.EncryptedData.Count + 1, rollCode, rollNo);
+                _logger.LogInformation("[APPEND] Version {Version} added → rollcode={RollCode} rollnumber={RollNo}", existing.EncryptedData.Count + 1, rollCode, rollNo);
 
                 return ProcessResult.Processed;
             }
