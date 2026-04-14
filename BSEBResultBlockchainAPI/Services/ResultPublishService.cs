@@ -10,9 +10,9 @@ namespace BSEBResultBlockchainAPI.Services
         private readonly ILogger<ResultPublishService> _logger;
         private readonly IConfiguration _config;
 
-        private int BatchSize => _config.GetValue<int>("Processing:BatchSize", 50);
-        private int DelayBetweenBatchesMs => _config.GetValue<int>("Processing:DelayBetweenBatchesMs", 500);
-        private int DegreeOfParallelism => _config.GetValue<int>("Processing:DegreeOfParallelism", 5);
+        private int BatchSize => _config.GetValue<int>("Processing:BatchSize", 500);
+        private int DelayBetweenBatchesMs => _config.GetValue<int>("Processing:DelayBetweenBatchesMs", 50);
+        private int DegreeOfParallelism => _config.GetValue<int>("Processing:DegreeOfParallelism", 15);
 
         public ResultPublishService(DbHelper dbHelper,IFlureeService flureeService,  ILogger<ResultPublishService> logger,IConfiguration config)
         {
@@ -55,24 +55,39 @@ namespace BSEBResultBlockchainAPI.Services
                     }
 
                     // Step 3: Process batch with limited parallelism
+
                     var semaphore = new SemaphoreSlim(DegreeOfParallelism);
 
                     var tasks = batch.Select(async roll =>
                     {
                         await semaphore.WaitAsync(cancellationToken);
+
                         try
                         {
                             var result = await ProcessSingleRollAsync(roll.RollCode, roll.RollNo);
 
-                            if (result == ProcessResult.Processed)
-                                Interlocked.Increment(ref processed);
-                            else if (result == ProcessResult.Skipped)
-                                Interlocked.Increment(ref skipped);
+                            switch (result)
+                            {
+                                case ProcessResult.Processed:
+                                    Interlocked.Increment(ref processed);
+                                    _logger.LogInformation("[PROCESSED] {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
+                                    break;
+
+                                case ProcessResult.Skipped:
+                                    Interlocked.Increment(ref skipped);
+                                    _logger.LogInformation("[SKIPPED] {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
+                                    break;
+
+                                case ProcessResult.Failed:
+                                    Interlocked.Increment(ref failed);
+                                    _logger.LogWarning("[FAILED] {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
+                                    break;
+                            }
                         }
                         catch (Exception ex)
                         {
                             Interlocked.Increment(ref failed);
-                            _logger.LogError(ex, "[Error] RollCode={RollCode} RollNo={RollNo}", roll.RollCode, roll.RollNo);
+                            _logger.LogError(ex, "[EXCEPTION] {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
                         }
                         finally
                         {
@@ -80,9 +95,51 @@ namespace BSEBResultBlockchainAPI.Services
                         }
                     });
 
+
+
+
+
+
+
+
+
+
+                    //var semaphore = new SemaphoreSlim(DegreeOfParallelism);
+
+                    //var tasks = batch.Select(async roll =>
+                    //{
+                    //    await semaphore.WaitAsync(cancellationToken);
+                    //    try
+                    //    {
+                    //        var result = await ProcessSingleRollAsync(roll.RollCode, roll.RollNo);
+
+                    //        if (result == ProcessResult.Processed)
+                    //            Interlocked.Increment(ref processed);
+                    //        else if (result == ProcessResult.Skipped)
+                    //            Interlocked.Increment(ref skipped);
+                    //    }
+                    //    catch (Exception ex)
+                    //    {
+                    //        Interlocked.Increment(ref failed);
+                    //        _logger.LogError(ex, "[Error] RollCode={RollCode} RollNo={RollNo}", roll.RollCode, roll.RollNo);
+                    //    }
+                    //    finally
+                    //    {
+                    //        semaphore.Release();
+                    //    }
+                    //});
+
                     await Task.WhenAll(tasks);
 
-                    _logger.LogInformation("Batch done → Processed={P} Skipped={S} Failed={F}", processed, skipped, failed);
+                    _logger.LogInformation(
+    "Batch completed → BatchSize={BatchSize}, TotalProcessed={Processed}, Skipped={Skipped}, Failed={Failed}",
+    batch.Count,
+    processed,
+    skipped,
+    failed
+);
+
+                    // _logger.LogInformation("Batch done → Processed={P} Skipped={S} Failed={F}", processed, skipped, failed);
 
                     // Step 4: Delay between batches to reduce load
                     if (!cancellationToken.IsCancellationRequested)
@@ -94,7 +151,8 @@ namespace BSEBResultBlockchainAPI.Services
             catch (Exception ex)
             {
 
-                throw ex;
+                _logger.LogError(ex, "Fatal error in PublishAllResultsAsync");
+                throw;
             }
           
         }
@@ -173,7 +231,8 @@ namespace BSEBResultBlockchainAPI.Services
             catch (Exception ex)
             {
 
-                throw ex;
+                _logger.LogError(ex, "Error processing roll {RollCode}/{RollNo}", rollCode, rollNo);
+                throw;
             }
            
         }
@@ -185,6 +244,7 @@ namespace BSEBResultBlockchainAPI.Services
     public enum ProcessResult
     {
         Processed,
-        Skipped
+        Skipped,
+        Failed
     }
 }

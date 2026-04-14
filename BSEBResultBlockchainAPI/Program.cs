@@ -42,6 +42,7 @@ builder.Services.AddHttpClient("FlureeClient", client =>
 // Services
 builder.Services.AddScoped<IFlureeService, FlureeService>();
 builder.Services.AddScoped<IResultPublishService, ResultPublishService>();
+builder.Services.AddScoped<IResultUpdateService, ResultUpdateService>();
 
 // Background Job (runs once on startup — swap for Hangfire/Quartz for scheduled)
 //builder.Services.AddHostedService<ResultPublishJob>();
