@@ -21,13 +21,33 @@ namespace BSEBResultBlockchainAPI.Controllers
             if (string.IsNullOrWhiteSpace(rollCode) || string.IsNullOrWhiteSpace(rollNo))
                 return BadRequest("rollCode and rollNo are required");
 
-            var result = await _updateService.UpdateSingleResultAsync(rollCode, rollNo);
-
-            return Ok(new
+          
+            try
             {
-                message = "Process completed",
-                status = result.ToString()
-            });
+                var result = await _updateService.UpdateSingleResultAsync(rollCode, rollNo);
+
+                return Ok(new
+                {
+                    message = "Process completed",
+                    status = result.ToString()
+                });
+            }
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(503, new
+                {
+                    message = "Unable to connect to remote server",
+                    error = ex.Message
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "Internal server error",
+                    error = ex.Message
+                });
+            }
         }
     }
 }
