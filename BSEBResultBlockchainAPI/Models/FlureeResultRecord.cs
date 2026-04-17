@@ -7,6 +7,10 @@
         public string? BsebId { get; set; }
         public string? RollCode { get; set; }
         public string? RollNumber { get; set; }
+        public string? enc_v1 { get; set; }
+        public string? enc_v2 { get; set; }
+        public string? approval1 { get; set; }
+        public string? approval2 { get; set; }
 
         /// <summary>
         /// Encrypted version history: ["ENC_v1", "ENC_v2", "ENC_v3"]
