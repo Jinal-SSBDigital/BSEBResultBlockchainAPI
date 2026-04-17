@@ -48,6 +48,37 @@ namespace BSEBResultBlockchainAPI.Helpers
             }
            
         }
+        public async Task<List<(string Approval1, string Approval2)>> GetAllAroval()
+        {
+            try
+            {
+                var result = new List<(string, string)>();
+                using var conn = new SqlConnection(_connectionString);
+                if (conn.State != ConnectionState.Open)
+                    await conn.OpenAsync();
+
+                using var cmd = conn.CreateCommand();
+                cmd.CommandText = "GetAllAroval";// add in database this sp for get all approval data for publish result in blockchain
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandTimeout = 300;
+
+                using var reader = await cmd.ExecuteReaderAsync();
+                while (await reader.ReadAsync())
+                {
+                    result.Add((
+                        reader["Approval1"].ToString()!,
+                        reader["Approval2"].ToString()!
+                    ));
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+           
+        }
 
         public async Task<StudentResult?> GetStudentResultAsync(string rollcode, string rollno)
         {
