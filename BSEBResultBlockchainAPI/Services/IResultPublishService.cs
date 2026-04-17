@@ -3,5 +3,6 @@
     public interface IResultPublishService
     {
         Task PublishAllResultsAsync(CancellationToken cancellationToken = default);
+        Task Encv2PublishAllResultsAsync(CancellationToken cancellationToken = default);
     }
 }
