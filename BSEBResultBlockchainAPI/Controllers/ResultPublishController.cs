@@ -26,6 +26,13 @@ namespace BSEBResultBlockchainAPI.Controllers
             _ = Task.Run(() => _publishService.PublishAllResultsAsync());
             return Accepted(new { message = "Publishing started in background." });
         }
+        [HttpPost("Encv2PublishData")]
+        public IActionResult Encv2PublishData()
+        {
+            // Fire-and-forget — runs in background, API returns immediately
+            _ = Task.Run(() => _publishService.Encv2PublishAllResultsAsync());
+            return Accepted(new { message = "Encv2 Publishing started in background." });
+        }
 
         [HttpGet("decrypt")]
         public async Task<IActionResult> GetDecrypted(string rollCode, string rollNo)
