@@ -43,15 +43,15 @@ namespace BSEBResultBlockchainAPI.Services
             {
                 var query = new
                 {
-                    select = new[] { "?sid", "?encrypteddata", "?bsebid", "?createddate", "?updateddate" },
+                    select = new[] { "?sid", "?enc_v1", "?bsebid", "?createddate", "?updateddate" },
                     where = new object[]
                     {
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode",      rollCode         },
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber",    rollNo           },
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/encrypteddata", "?encrypteddata" },
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/createddate",   "?createddate"   },
-                        new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate",   "?updateddate"   }
+                new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode",      rollCode         },
+                new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber",    rollNo           },
+                new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
+                new object[] { "?sid", "BSEB_FinalPublishedResult/enc_v1", "?enc_v1" },
+                new object[] { "?sid", "BSEB_FinalPublishedResult/createddate",   "?createddate"   },
+                new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate",   "?updateddate"   }
                     }
                 };
 
@@ -67,7 +67,9 @@ namespace BSEBResultBlockchainAPI.Services
                 var row = rows[0];
 
                 // ── Extract raw encrypteddata string ──────────────────────────────────
-                var encRaw = row[1].ValueKind == JsonValueKind.String ? row[1].GetString()!  : row[1].GetRawText();
+                var encRaw = row[1].ValueKind == JsonValueKind.String
+                    ? row[1].GetString()!
+                    : row[1].GetRawText();
 
                 // ── Deserialize JSON string → List<Dictionary<string, string>> ────────
                 // Data is now stored as clean JSON: [{"ENC_v1":"..."},{"ENC_v2":"..."}]
@@ -75,14 +77,19 @@ namespace BSEBResultBlockchainAPI.Services
                 List<Dictionary<string, string>> encList;
                 try
                 {
-                    encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(encRaw) ?? new List<Dictionary<string, string>>();
+                    encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(encRaw)
+                              ?? new List<Dictionary<string, string>>();
                 }
                 catch
                 {
                     // Fallback: if old EDN-format data still exists in DB, normalize it
                     _logger.LogWarning("[Fluree] Falling back to EDN normalization for encrypteddata. Raw: {Data}", encRaw);
 
-                    var normalized = System.Text.RegularExpressions.Regex.Replace(encRaw,  @"\{:([^\s]+)\s+""([^""]*)""\}", "{\"$1\":\"$2\"}" );
+                    var normalized = System.Text.RegularExpressions.Regex.Replace(
+                        encRaw,
+                        @"\{:([^\s]+)\s+""([^""]*)""\}",
+                        "{\"$1\":\"$2\"}"
+                    );
 
                     try
                     {
@@ -93,7 +100,10 @@ namespace BSEBResultBlockchainAPI.Services
                     {
                         // Last resort: wrap raw string as ENC_v1
                         _logger.LogWarning("[Fluree] EDN normalization also failed. Wrapping raw value as ENC_v1.");
-                        encList = new List<Dictionary<string, string>> { new Dictionary<string, string> { { "ENC_v1", encRaw } } };
+                        encList = new List<Dictionary<string, string>>
+                {
+                    new Dictionary<string, string> { { "ENC_v1", encRaw } }
+                };
                     }
                 }
 
@@ -104,8 +114,9 @@ namespace BSEBResultBlockchainAPI.Services
                     RollCode = rollCode,
                     RollNumber = rollNo,
 
-                    EncryptedData = encList,
-                    //BsebId = row[2].GetString(),
+                    enc_v1 = encList,
+                    //EncryptedData = encList,
+                    BsebId = row[2].GetString(),
 
                     CreatedDate = ParseFlureeDate(row[3]),
                     UpdatedDate = ParseFlureeDate(row[4])
@@ -117,6 +128,86 @@ namespace BSEBResultBlockchainAPI.Services
                 throw;
             }
         }
+        //public async Task<FlureeResultRecord?> GetByRollAsync(string rollCode, string rollNo)
+        //{
+        //    try
+        //    {
+        //        var query = new
+        //        {
+        //            select = new[] { "?sid", "?encrypteddata", "?bsebid", "?createddate", "?updateddate" },
+        //            where = new object[]
+        //            {
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode",      rollCode         },
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber",    rollNo           },
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/encrypteddata", "?encrypteddata" },
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/createddate",   "?createddate"   },
+        //                new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate",   "?updateddate"   }
+        //            }
+        //        };
+
+        //        var responseBody = await PostFlureeAsync("/query", query);
+
+        //        if (string.IsNullOrWhiteSpace(responseBody)) return null;
+
+        //        // Fluree returns: [ [sid, encrypteddata, createddate, updateddate], ... ]
+        //        var rows = JsonSerializer.Deserialize<List<List<JsonElement>>>(responseBody);
+
+        //        if (rows == null || rows.Count == 0) return null;
+
+        //        var row = rows[0];
+
+        //        // ── Extract raw encrypteddata string ──────────────────────────────────
+        //        var encRaw = row[1].ValueKind == JsonValueKind.String ? row[1].GetString()!  : row[1].GetRawText();
+
+        //        // ── Deserialize JSON string → List<Dictionary<string, string>> ────────
+        //        // Data is now stored as clean JSON: [{"ENC_v1":"..."},{"ENC_v2":"..."}]
+        //        // No Base64 decode, no EDN normalization needed
+        //        List<Dictionary<string, string>> encList;
+        //        try
+        //        {
+        //            encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(encRaw) ?? new List<Dictionary<string, string>>();
+        //        }
+        //        catch
+        //        {
+        //            // Fallback: if old EDN-format data still exists in DB, normalize it
+        //            _logger.LogWarning("[Fluree] Falling back to EDN normalization for encrypteddata. Raw: {Data}", encRaw);
+
+        //            var normalized = System.Text.RegularExpressions.Regex.Replace(encRaw,  @"\{:([^\s]+)\s+""([^""]*)""\}", "{\"$1\":\"$2\"}" );
+
+        //            try
+        //            {
+        //                encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(normalized)
+        //                          ?? new List<Dictionary<string, string>>();
+        //            }
+        //            catch
+        //            {
+        //                // Last resort: wrap raw string as ENC_v1
+        //                _logger.LogWarning("[Fluree] EDN normalization also failed. Wrapping raw value as ENC_v1.");
+        //                encList = new List<Dictionary<string, string>> { new Dictionary<string, string> { { "ENC_v1", encRaw } } };
+        //            }
+        //        }
+
+        //        return new FlureeResultRecord
+        //        {
+        //            FlureeSubjectId = row[0].GetRawText().Trim('"'),
+
+        //            RollCode = rollCode,
+        //            RollNumber = rollNo,
+
+        //            EncryptedData = encList,
+        //            //BsebId = row[2].GetString(),
+
+        //            CreatedDate = ParseFlureeDate(row[3]),
+        //            UpdatedDate = ParseFlureeDate(row[4])
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "[Fluree] GetByRollAsync failed → rollcode={RollCode} rollnumber={RollNo}", rollCode, rollNo);
+        //        throw;
+        //    }
+        //}
 
         // ─────────────────────────────────────────────────────────────────────────
         // INSERT: First-time record creation
@@ -223,35 +314,37 @@ namespace BSEBResultBlockchainAPI.Services
 
             await TransactAsync(transaction);
         }
-        public async Task SaveEncV2RecordAsync(string rollCode, string rollNo, string enc_v2)
-        {
-            var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        //public async Task SaveEncV2RecordAsync(string rollCode, string rollNo, string Enc_V1,string Enc_V2)
+        //{
+        //    var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-            //var encList = new List<Dictionary<string, string>>
-            //{
-            //    new Dictionary<string, string> { { "ENC_v1", encryptedData } }
-            //};
+        //    //var encList = new List<Dictionary<string, string>>
+        //    //{
+        //    //    new Dictionary<string, string> { { "ENC_v1", encryptedData } }
+        //    //};
 
-            var encJson = JsonSerializer.Serialize(enc_v2); // ← plain, no options needed
+        //    var EncV1Json = JsonSerializer.Serialize(Enc_V1); // ← plain, no options needed
+        //    var EncV2Json = JsonSerializer.Serialize(Enc_V2); // ← plain, no options needed
 
-            var transaction = new[]
-            {
-                new Dictionary<string, object>
-                {
-                    ["_id"] = "BSEB_FinalPublishedResult",
-                    ["BSEB_FinalPublishedResult/bsebid"]        = Guid.NewGuid().ToString(),
-                    ["BSEB_FinalPublishedResult/rollcode"]      = rollCode,
-                    ["BSEB_FinalPublishedResult/rollnumber"]    = rollNo,
-                    ["BSEB_FinalPublishedResult/enc_v2"] = encJson,
-                    //     ["BSEB_FinalPublishedResult/approval1"] = approval1,
-                    //["BSEB_FinalPublishedResult/approval2"] = approval2,
-                    ["BSEB_FinalPublishedResult/createddate"]   = nowMs,
-                    ["BSEB_FinalPublishedResult/updateddate"]   = nowMs
-                }
-             };
+        //    var transaction = new[]
+        //    {
+        //        new Dictionary<string, object>
+        //        {
+        //            ["_id"] = "BSEB_FinalPublishedResult",
+        //            ["BSEB_FinalPublishedResult/bsebid"]        = Guid.NewGuid().ToString(),
+        //            ["BSEB_FinalPublishedResult/rollcode"]      = rollCode,
+        //            ["BSEB_FinalPublishedResult/rollnumber"]    = rollNo,
+        //            ["BSEB_FinalPublishedResult/enc_v1"] = EncV1Json,
+        //            ["BSEB_FinalPublishedResult/enc_v2"] = EncV2Json,
+        //            ["BSEB_FinalPublishedResult/approval1"] = "",
+        //            ["BSEB_FinalPublishedResult/approval2"] = "",
+        //            ["BSEB_FinalPublishedResult/createddate"]   = nowMs,
+        //            ["BSEB_FinalPublishedResult/updateddate"]   = nowMs
+        //        }
+        //     };
 
-            await TransactAsync(transaction);
-        }
+        //    await TransactAsync(transaction);
+        //}
 
         //public async Task AppendEncryptedVersionAsync(FlureeResultRecord existing, string newEncryptedData)
         //{
@@ -469,6 +562,49 @@ namespace BSEBResultBlockchainAPI.Services
             }
 
             return result; // still works because List<object> is object
+        }
+
+        public async Task UpsertRecordAsync(string rollCode, string rollNo, string enc_v1, string enc_v2,long FlureeSubjectId,string BsebId)
+        {
+            //var existing = await GetByRollAsync(rollCode, rollNo);
+
+            //if (existing == null)
+            //{
+            //    await SaveEncV2RecordAsync(rollCode, rollNo, enc_v1, enc_v2);
+            //    return;
+            //}
+
+            await UpdateRecordAsync(rollCode, rollNo, enc_v1, enc_v2, FlureeSubjectId, BsebId);
+        }
+        public async Task UpdateRecordAsync(string rollCode, string rollNo, string enc_v1, string enc_v2,long FlureeSubjectId, string BsebId)
+        {
+            //var existing = await GetByRollAsync(rollCode, rollNo);
+
+            //if (existing == null)
+            //    throw new Exception("Record not found. Cannot update.");
+
+            var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            var transaction = new[]
+            {
+        new Dictionary<string, object>
+        {
+            // ✅ IMPORTANT: use existing subject id
+            ["_id"] = FlureeSubjectId,
+
+            // ✅ update only required fields
+              ["BSEB_FinalPublishedResult/bsebid"]        = BsebId,
+            ["BSEB_FinalPublishedResult/enc_v1"] = JsonSerializer.Serialize(enc_v1),
+            ["BSEB_FinalPublishedResult/enc_v2"] = JsonSerializer.Serialize(enc_v2),
+            ["BSEB_FinalPublishedResult/approval1"] = "Approved",
+            ["BSEB_FinalPublishedResult/approval2"] = "Approved",
+            ["BSEB_FinalPublishedResult/rollcode"] = rollCode,
+            ["BSEB_FinalPublishedResult/rollnumber"] = rollNo,
+            ["BSEB_FinalPublishedResult/updateddate"] = nowMs
+        }
+    };
+
+            await TransactAsync(transaction);
         }
     }
 }
