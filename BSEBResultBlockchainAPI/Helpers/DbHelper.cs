@@ -27,7 +27,7 @@ namespace BSEBResultBlockchainAPI.Helpers
                     await conn.OpenAsync();
 
                 using var cmd = conn.CreateCommand();
-                cmd.CommandText = "GetAllRollCodesForQR";
+                cmd.CommandText = "BlockchainGetAllRollCodesForQR";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandTimeout = 300;
 
@@ -48,36 +48,42 @@ namespace BSEBResultBlockchainAPI.Helpers
             }
            
         }
-        public async Task<List<(string Approval1, string Approval2)>> GetAllAroval()
+        public async Task<List<(string Approval1, string Approval2, string RollCode, string RollNo)>>GetAllAroval(string rollCode, string rollNo)
         {
             try
             {
-                var result = new List<(string, string)>();
+                var result = new List<(string, string, string, string)>();
+
                 using var conn = new SqlConnection(_connectionString);
                 if (conn.State != ConnectionState.Open)
                     await conn.OpenAsync();
 
                 using var cmd = conn.CreateCommand();
-                cmd.CommandText = "GetAllAroval";// add in database this sp for get all approval data for publish result in blockchain
+                cmd.CommandText = "GetAllAroval";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandTimeout = 300;
+
+                // ✅ Add parameters
+                cmd.Parameters.AddWithValue("@Rollcode", rollCode);
+                cmd.Parameters.AddWithValue("@RollNo", rollNo);
 
                 using var reader = await cmd.ExecuteReaderAsync();
                 while (await reader.ReadAsync())
                 {
                     result.Add((
-                        reader["Approval1"].ToString()!,
-                        reader["Approval2"].ToString()!
+                        reader["Approval1"]?.ToString() ?? "",
+                        reader["Approval2"]?.ToString() ?? "",
+                        reader["roll_code"]?.ToString() ?? "",
+                        reader["roll_no"]?.ToString() ?? ""
                     ));
                 }
+
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
-           
         }
 
         public async Task<StudentResult?> GetStudentResultAsync(string rollcode, string rollno)
