@@ -364,32 +364,37 @@ namespace BSEBResultBlockchainAPI.Services
                     var approval = approvals.First();
                     string Enc_V1 = string.Empty;
 
-                    if (existing?.enc_v1 != null && existing.enc_v1.Count > 0)
-                    {
-                        existing.enc_v1[0].TryGetValue("ENC_v1", out Enc_V1);
-                    }
+                    
                     if (approval.Approval1 == "Approved" && approval.Approval2 == "Approved")
                     {
-                        await _flureeService.UpsertRecordAsync(rollCode, rollNo, Enc_V1,Enc_V2,Convert.ToInt64(existing.FlureeSubjectId),existing.BsebId);
+                        if (existing?.enc_v1 != null && existing.enc_v1.Count > 0)
+                        {
+                            existing.enc_v1[0].TryGetValue("ENC_v1", out Enc_V1);
+                        }
+                        if (!string.IsNullOrEmpty(approval.RollNo) && !string.IsNullOrEmpty(approval.RollCode))
+                        {
+                            await _flureeService.UpsertRecordAsync(rollCode, rollNo, Enc_V1, Enc_V2, Convert.ToInt64(existing.FlureeSubjectId), existing.BsebId);
+
+                        }
                         //await _flureeService.SaveEncV2RecordAsync(rollCode, rollNo, Enc_V1,Enc_V2);
 
                         _logger.LogInformation("[Skip] Not fully approved → {RollCode}/{RollNo}", rollCode, rollNo);
-                        return ProcessResult.Skipped;
+                        //return ProcessResult.Skipped;
                     }
                     _logger.LogInformation("[INSERT] New record → rollcode={RollCode} rollnumber={RollNo}", rollCode, rollNo);
 
                     return ProcessResult.Processed;
                 }
 
-                var lastEntry = existing.EncryptedData.LastOrDefault();
-                string? latestValue = lastEntry?.Values.FirstOrDefault();
+                //var lastEntry = existing.EncryptedData.LastOrDefault();
+                //string? latestValue = lastEntry?.Values.FirstOrDefault();
 
-                if (latestValue == Enc_V2)
-                {
-                    _logger.LogDebug("[Skip] No change detected → rollcode={RollCode} rollnumber={RollNo}",rollCode, rollNo);
+                //if (latestValue == Enc_V2)
+                //{
+                //    _logger.LogDebug("[Skip] No change detected → rollcode={RollCode} rollnumber={RollNo}",rollCode, rollNo);
 
-                    return ProcessResult.Skipped;
-                }
+                //    return ProcessResult.Skipped;
+                //}
               
 
                 _logger.LogInformation("[APPEND] Version {Version} added → rollcode={RollCode} rollnumber={RollNo}", existing.EncryptedData.Count + 1, rollCode, rollNo);
