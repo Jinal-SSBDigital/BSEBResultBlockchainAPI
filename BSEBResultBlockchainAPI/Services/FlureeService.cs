@@ -121,6 +121,115 @@ namespace BSEBResultBlockchainAPI.Services
                 throw;
             }
         }
+        public async Task<FlureeResultRecord?> GetDecryptedByRollAsync(string rollCode, string rollNo)
+        {
+            try
+            {
+                var query = new
+                {
+                    select = new[] { "?sid", "?enc_v1", "?enc_v2", "?bsebid", "?createddate", "?updateddate" },
+                    where = new object[]
+                    {
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode", rollCode },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber", rollNo },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/enc_v1", "?enc_v1" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/enc_v2", "?enc_v2" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/createddate", "?createddate" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate", "?updateddate" }
+                    }
+                };
+
+                var responseBody = await PostFlureeAsync("/query", query);
+
+                if (string.IsNullOrWhiteSpace(responseBody))
+                    return null;
+
+                var rows = JsonSerializer.Deserialize<List<List<JsonElement>>>(responseBody);
+
+                if (rows == null || rows.Count == 0)
+                    return null;
+
+                var row = rows[0];
+
+                var encRaw1 = row[1].ValueKind == JsonValueKind.String ? row[1].GetString()! : row[1].GetRawText();
+
+                var encRaw2 = row[2].ValueKind == JsonValueKind.String ? row[2].GetString()! : row[2].GetRawText();
+
+                // ✅ SAFE PARSER (handles JSON / EDN / RAW)
+                List<Dictionary<string, string>> ParseEnc(string raw, string key)
+                {
+                    if (string.IsNullOrWhiteSpace(raw))
+                        return new List<Dictionary<string, string>>();
+
+                    raw = raw.Trim();
+
+                    // ✅ Case 1: Proper JSON
+                    if (raw.StartsWith("{") || raw.StartsWith("["))
+                    {
+                        try
+                        {
+                            return JsonSerializer.Deserialize<List<Dictionary<string, string>>>(raw) ?? new List<Dictionary<string, string>>();
+                        }
+                        catch (Exception ex)
+                        {
+                            _logger.LogWarning(ex, "[Fluree] JSON parse failed. Trying EDN normalization...");
+                        }
+                    }
+
+                    // ✅ Case 2: Try EDN → JSON conversion
+                    try
+                    {
+                        var normalized = System.Text.RegularExpressions.Regex.Replace(raw, @"\{:([^\s]+)\s+""([^""]*)""\}", "{\"$1\":\"$2\"}" );
+
+                        if (normalized.StartsWith("{") || normalized.StartsWith("["))
+                        {
+                            return JsonSerializer.Deserialize<List<Dictionary<string, string>>>(normalized) ?? new List<Dictionary<string, string>>();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogWarning(ex, "[Fluree] EDN normalization failed.");
+                    }
+
+                    // ✅ Case 3: RAW encrypted string (final fallback)
+                    _logger.LogWarning("[Fluree] Treating value as raw encrypted string.");
+
+                    return new List<Dictionary<string, string>>
+                    {
+                        new Dictionary<string, string> { { key, raw } }
+                    };
+                }
+
+                var encList1 = ParseEnc(encRaw1, "ENC_v1");
+                var encList2 = ParseEnc(encRaw2, "ENC_v2");
+
+                return new FlureeResultRecord
+                {
+                    FlureeSubjectId = row[0].GetRawText().Trim('"'),
+
+                    RollCode = rollCode,
+                    RollNumber = rollNo,
+
+                    enc_v1 = encList1,
+                    enc_v2 = encList2,
+
+                    BsebId = row[3].GetString(),
+
+                    CreatedDate = ParseFlureeDate(row[4]),
+                    UpdatedDate = ParseFlureeDate(row[5])
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex,
+                    "[Fluree] GetByRollAsync failed → rollcode={RollCode} rollnumber={RollNo}",
+                    rollCode, rollNo);
+                throw;
+            }
+        }
+
+
         //public async Task<FlureeResultRecord?> GetByRollAsync(string rollCode, string rollNo)
         //{
         //    try
@@ -535,14 +644,22 @@ namespace BSEBResultBlockchainAPI.Services
 
         public async Task<object?> GetDecryptedAllWithVersionAsync(string rollCode, string rollNo)
         {
-            var record = await GetByRollAsync(rollCode, rollNo);
+            var record = await GetDecryptedByRollAsync(rollCode, rollNo);
 
-            if (record == null || record.EncryptedData == null || record.EncryptedData.Count == 0)
+            if (record == null)
                 return null;
 
             var result = new List<object>();
 
-            foreach (var entry in record.EncryptedData)
+            var allEncrypted = new List<Dictionary<string, string>>();
+
+            if (record.enc_v1 != null)
+                allEncrypted.AddRange(record.enc_v1);
+
+            if (record.enc_v2 != null)
+                allEncrypted.AddRange(record.enc_v2);
+
+            foreach (var entry in allEncrypted)
             {
                 foreach (var kv in entry)
                 {
@@ -550,13 +667,13 @@ namespace BSEBResultBlockchainAPI.Services
 
                     result.Add(new
                     {
-                        Version = kv.Key,
+                        Version = kv.Key,   // ENC_v1 / ENC_v2
                         Data = decrypted
                     });
                 }
             }
 
-            return result; // still works because List<object> is object
+            return result;
         }
 
         public async Task UpsertRecordAsync(string rollCode, string rollNo, string enc_v1, string enc_v2,long FlureeSubjectId,string BsebId)
