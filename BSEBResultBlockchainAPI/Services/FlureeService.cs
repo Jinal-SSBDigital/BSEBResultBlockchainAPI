@@ -46,12 +46,12 @@ namespace BSEBResultBlockchainAPI.Services
                     select = new[] { "?sid", "?enc_v1", "?bsebid", "?createddate", "?updateddate" },
                     where = new object[]
                     {
-                new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode",      rollCode         },
-                new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber",    rollNo           },
-                new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
-                new object[] { "?sid", "BSEB_FinalPublishedResult/enc_v1", "?enc_v1" },
-                new object[] { "?sid", "BSEB_FinalPublishedResult/createddate",   "?createddate"   },
-                new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate",   "?updateddate"   }
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollcode",      rollCode         },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/rollnumber",    rollNo           },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/bsebid", "?bsebid" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/enc_v1", "?enc_v1" },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/createddate",   "?createddate"   },
+                        new object[] { "?sid", "BSEB_FinalPublishedResult/updateddate",   "?updateddate"   }
                     }
                 };
 
@@ -67,9 +67,7 @@ namespace BSEBResultBlockchainAPI.Services
                 var row = rows[0];
 
                 // ── Extract raw encrypteddata string ──────────────────────────────────
-                var encRaw = row[1].ValueKind == JsonValueKind.String
-                    ? row[1].GetString()!
-                    : row[1].GetRawText();
+                var encRaw = row[1].ValueKind == JsonValueKind.String  ? row[1].GetString()! : row[1].GetRawText();
 
                 // ── Deserialize JSON string → List<Dictionary<string, string>> ────────
                 // Data is now stored as clean JSON: [{"ENC_v1":"..."},{"ENC_v2":"..."}]
@@ -77,24 +75,18 @@ namespace BSEBResultBlockchainAPI.Services
                 List<Dictionary<string, string>> encList;
                 try
                 {
-                    encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(encRaw)
-                              ?? new List<Dictionary<string, string>>();
+                    encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(encRaw) ?? new List<Dictionary<string, string>>();
                 }
                 catch
                 {
                     // Fallback: if old EDN-format data still exists in DB, normalize it
                     _logger.LogWarning("[Fluree] Falling back to EDN normalization for encrypteddata. Raw: {Data}", encRaw);
 
-                    var normalized = System.Text.RegularExpressions.Regex.Replace(
-                        encRaw,
-                        @"\{:([^\s]+)\s+""([^""]*)""\}",
-                        "{\"$1\":\"$2\"}"
-                    );
+                    var normalized = System.Text.RegularExpressions.Regex.Replace( encRaw, @"\{:([^\s]+)\s+""([^""]*)""\}", "{\"$1\":\"$2\"}" );
 
                     try
                     {
-                        encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(normalized)
-                                  ?? new List<Dictionary<string, string>>();
+                        encList = JsonSerializer.Deserialize<List<Dictionary<string, string>>>(normalized) ?? new List<Dictionary<string, string>>();
                     }
                     catch
                     {
@@ -294,7 +286,7 @@ namespace BSEBResultBlockchainAPI.Services
             //    new Dictionary<string, string> { { "ENC_v1", encryptedData } }
             //};
 
-            var encJson = JsonSerializer.Serialize(enc_v1); // ← plain, no options needed
+            //var encJson = JsonSerializer.Serialize(enc_v1); // ← plain, no options needed
 
             var transaction = new[]
             {
@@ -304,7 +296,7 @@ namespace BSEBResultBlockchainAPI.Services
                     ["BSEB_FinalPublishedResult/bsebid"]        = Guid.NewGuid().ToString(),
                     ["BSEB_FinalPublishedResult/rollcode"]      = rollCode,
                     ["BSEB_FinalPublishedResult/rollnumber"]    = rollNo,
-                    ["BSEB_FinalPublishedResult/enc_v1"] = encJson,
+                    ["BSEB_FinalPublishedResult/enc_v1"]     = enc_v1,
                     //["BSEB_FinalPublishedResult/approval1"] = approval1,
                     //["BSEB_FinalPublishedResult/approval2"] = approval2,
                     ["BSEB_FinalPublishedResult/createddate"]   = nowMs,
@@ -314,6 +306,8 @@ namespace BSEBResultBlockchainAPI.Services
 
             await TransactAsync(transaction);
         }
+
+
         //public async Task SaveEncV2RecordAsync(string rollCode, string rollNo, string Enc_V1,string Enc_V2)
         //{
         //    var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
@@ -587,22 +581,24 @@ namespace BSEBResultBlockchainAPI.Services
 
             var transaction = new[]
             {
-        new Dictionary<string, object>
-        {
-            // ✅ IMPORTANT: use existing subject id
-            ["_id"] = FlureeSubjectId,
+                new Dictionary<string, object>
+                {
+                    // ✅ IMPORTANT: use existing subject id
+                    ["_id"] = FlureeSubjectId,
 
-            // ✅ update only required fields
-              ["BSEB_FinalPublishedResult/bsebid"]        = BsebId,
-            ["BSEB_FinalPublishedResult/enc_v1"] = JsonSerializer.Serialize(enc_v1),
-            ["BSEB_FinalPublishedResult/enc_v2"] = JsonSerializer.Serialize(enc_v2),
-            ["BSEB_FinalPublishedResult/approval1"] = "Approved",
-            ["BSEB_FinalPublishedResult/approval2"] = "Approved",
-            ["BSEB_FinalPublishedResult/rollcode"] = rollCode,
-            ["BSEB_FinalPublishedResult/rollnumber"] = rollNo,
-            ["BSEB_FinalPublishedResult/updateddate"] = nowMs
-        }
-    };
+                    // ✅ update only required fields
+                      ["BSEB_FinalPublishedResult/bsebid"]        = BsebId,
+                    ["BSEB_FinalPublishedResult/enc_v1"] =enc_v1,
+                    ["BSEB_FinalPublishedResult/enc_v2"] = enc_v2,
+                    //["BSEB_FinalPublishedResult/enc_v1"] = JsonSerializer.Serialize(enc_v1),
+                    //["BSEB_FinalPublishedResult/enc_v2"] = JsonSerializer.Serialize(enc_v2),
+                    ["BSEB_FinalPublishedResult/approval1"] = "Approved",
+                    ["BSEB_FinalPublishedResult/approval2"] = "Approved",
+                    ["BSEB_FinalPublishedResult/rollcode"] = rollCode,
+                    ["BSEB_FinalPublishedResult/rollnumber"] = rollNo,
+                    ["BSEB_FinalPublishedResult/updateddate"] = nowMs
+                }
+            };
 
             await TransactAsync(transaction);
         }
