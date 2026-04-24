@@ -6,6 +6,7 @@ using System.Text.Json;
 
 namespace BSEBResultBlockchainAPI.Services
 {
+    #region Jinal
     public class FlureeService : IFlureeService
     {
         private readonly HttpClient _http;
@@ -603,4 +604,5 @@ namespace BSEBResultBlockchainAPI.Services
             await TransactAsync(transaction);
         }
     }
+    #endregion
 }

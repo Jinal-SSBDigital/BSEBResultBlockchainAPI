@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BSEBResultBlockchainAPI.Controllers
 {
+    #region Jinal
     [ApiController]
     [Route("api/[controller]")]
     public class ResultPublishController : ControllerBase
@@ -75,4 +76,5 @@ namespace BSEBResultBlockchainAPI.Controllers
             public string EncryptedData { get; set; }
         }
     }
+    #endregion
 }

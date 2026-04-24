@@ -3,6 +3,7 @@ using BSEBResultBlockchainAPI.Services.Interfaces;
 
 namespace BSEBResultBlockchainAPI.Services
 {
+    #region Jinal
     public class ResultPublishService : IResultPublishService
     {
         private readonly DbHelper _dbHelper;
@@ -409,6 +410,7 @@ namespace BSEBResultBlockchainAPI.Services
             }
            
         }
+#endregion
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
