@@ -720,6 +720,49 @@ namespace BSEBResultBlockchainAPI.Services
 
             await TransactAsync(transaction);
         }
+
+        public async Task SaveBulkEncV1BatchAsync(List<(string RollCode, string RollNo, string Enc_v1)> batch)
+        {
+            var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            var transaction = batch.Select(r => new Dictionary<string, object>
+            {
+                ["_id"] = "BSEB_FinalPublishedResult",
+                ["BSEB_FinalPublishedResult/bsebid"] = Guid.NewGuid().ToString(),
+                ["BSEB_FinalPublishedResult/rollcode"] = r.RollCode,
+                ["BSEB_FinalPublishedResult/rollnumber"] = r.RollNo,
+                ["BSEB_FinalPublishedResult/enc_v1"] = r.Enc_v1,
+                ["BSEB_FinalPublishedResult/createddate"] = nowMs,
+                ["BSEB_FinalPublishedResult/updateddate"] = nowMs
+            }).ToArray();
+
+            await TransactWithRetry(transaction, maxRetry: 3);
+
+            _logger.LogInformation("[Fluree] Bulk batch saved: {Count} records", batch.Count);
+        }
+
+        private async Task TransactWithRetry(object transaction, int maxRetry = 3)
+        {
+            for (int attempt = 1; attempt <= maxRetry; attempt++)
+            {
+                try
+                {
+                    await TransactAsync(transaction);
+                    return;
+                }
+                catch (Exception ex) when (attempt < maxRetry)
+                {
+                    var delay = TimeSpan.FromSeconds(Math.Pow(2, attempt)); // 2s → 4s → 8s
+                    _logger.LogWarning(ex, "[Fluree] Transact attempt {Attempt}/{Max} failed. Retrying in {Delay}s...", attempt, maxRetry, delay.TotalSeconds);
+                    await Task.Delay(delay);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "[Fluree] Transact FAILED after {Max} attempts.", maxRetry);
+                    throw;
+                }
+            }
+        }
     }
     #endregion
 }
