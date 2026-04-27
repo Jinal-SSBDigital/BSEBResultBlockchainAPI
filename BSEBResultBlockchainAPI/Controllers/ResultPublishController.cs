@@ -24,9 +24,13 @@ namespace BSEBResultBlockchainAPI.Controllers
         public IActionResult PublishAll()
         {
             // Fire-and-forget — runs in background, API returns immediately
-            _ = Task.Run(() => _publishService.PublishAllResultsAsync());
+            _ = Task.Run(() => _publishService.PublishAllResultsAsyncNew());
+            //_ = Task.Run(() => _publishService.PublishAllResultsAsync());
             return Accepted(new { message = "Publishing started in background." });
         }
+
+
+
         [HttpPost("Encv2PublishData")]
         public IActionResult Encv2PublishData()
         {
