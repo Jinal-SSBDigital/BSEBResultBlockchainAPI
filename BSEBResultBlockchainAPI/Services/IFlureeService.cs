@@ -14,5 +14,7 @@ namespace BSEBResultBlockchainAPI.Services.Interfaces
         //Task AppendEncryptedVersionAsync(FlureeResultRecord existing, string newEncryptedData);
         //Task<object?> GetDecryptedLatestAsync(string rollCode, string rollNo);
         Task<object?> GetDecryptedAllWithVersionAsync(string rollCode, string rollNo);
+
+        Task SaveBulkEncV1BatchAsync(List<(string RollCode, string RollNo, string Enc_v1)> batch);
     }
 }
