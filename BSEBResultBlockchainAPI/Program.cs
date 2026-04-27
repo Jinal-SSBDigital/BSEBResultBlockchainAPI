@@ -36,7 +36,8 @@ builder.Services.AddScoped<DbHelper>();
 // Fluree HTTP Client
 builder.Services.AddHttpClient("FlureeClient", client =>
 {
-    client.Timeout = TimeSpan.FromSeconds(60);
+    client.Timeout = TimeSpan.FromSeconds(10);
+    //client.Timeout = TimeSpan.FromSeconds(60);
 });
 
 // Services
