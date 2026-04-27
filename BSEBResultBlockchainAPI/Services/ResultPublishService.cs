@@ -410,7 +410,131 @@ namespace BSEBResultBlockchainAPI.Services
             }
            
         }
-#endregion
+
+        private int FlureeBatchSize => _config.GetValue<int>("Processing:FlureeBatchSize", 200);
+
+        public async Task PublishAllResultsAsyncNew(CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                _logger.LogInformation("=== Starting BSEB Result Blockchain Publish ===");
+
+                // ── Step 1: Fetch all roll pairs from SQL ────────────────────────────
+                var allRolls = await _dbHelper.GetAllRollCodesAsync();
+                _logger.LogInformation("Total roll pairs fetched: {Count}", allRolls.Count);
+
+                if (allRolls.Count == 0)
+                {
+                    _logger.LogWarning("No roll pairs found. Exiting publish.");
+                    return;
+                }
+
+                int processed = 0, failed = 0, skipped = 0;
+
+                // ── Step 2: Divide roll pairs into SQL processing batches ────────────
+                var sqlBatches = allRolls
+                    .Select((item, index) => new { item, index })
+                    .GroupBy(x => x.index / BatchSize)
+                    .Select(g => g.Select(x => x.item).ToList())
+                    .ToList();
+
+                _logger.LogInformation("Processing {SqlBatches} SQL batches of {BatchSize} each", sqlBatches.Count, BatchSize);
+
+                foreach (var sqlBatch in sqlBatches)
+                {
+                    if (cancellationToken.IsCancellationRequested)
+                    {
+                        _logger.LogWarning("Cancellation requested. Stopping publish.");
+                        break;
+                    }
+
+                    // ── Step 3: Fetch + encrypt student data in parallel ─────────────
+                    // Each task: SQL fetch → encrypt → add to collected list
+                    var collectedRecords = new System.Collections.Concurrent.ConcurrentBag<(string RollCode, string RollNo, string Enc_v1)>();
+                    var semaphore = new SemaphoreSlim(DegreeOfParallelism);
+
+                    var fetchTasks = sqlBatch.Select(async roll =>
+                    {
+                        await semaphore.WaitAsync(cancellationToken);
+                        try
+                        {
+                            var student = await _dbHelper.GetStudentResultAsync(roll.RollCode, roll.RollNo);
+                            if (student == null)
+                            {
+                                Interlocked.Increment(ref skipped);
+                                _logger.LogDebug("[SKIPPED] No SQL data → {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
+                                return;
+                            }
+
+                            string encrypted = QrUtility.GenerateEncrypteForstudentdata(student);
+                            collectedRecords.Add((roll.RollCode, roll.RollNo, encrypted));
+                        }
+                        catch (Exception ex)
+                        {
+                            Interlocked.Increment(ref failed);
+                            _logger.LogError(ex, "[SQL FETCH FAILED] {RollCode}/{RollNo}", roll.RollCode, roll.RollNo);
+                        }
+                        finally
+                        {
+                            semaphore.Release();
+                        }
+                    });
+
+                    await Task.WhenAll(fetchTasks);
+
+                    // ── Step 4: Send collected records to Fluree in bulk batches ─────
+                    // e.g. 500 SQL records → 3 Fluree calls of 200 each
+                    var flureeRecords = collectedRecords.ToList();
+                    var flureeBatches = flureeRecords
+                        .Select((item, index) => new { item, index })
+                        .GroupBy(x => x.index / FlureeBatchSize)
+                        .Select(g => g.Select(x => x.item).ToList())
+                        .ToList();
+
+                    _logger.LogInformation("Sending {Count} records to Fluree in {Batches} bulk calls",
+                        flureeRecords.Count, flureeBatches.Count);
+
+                    foreach (var flureeBatch in flureeBatches)
+                    {
+                        if (cancellationToken.IsCancellationRequested) break;
+
+                        try
+                        {
+                            await _flureeService.SaveBulkEncV1BatchAsync(flureeBatch);
+                            Interlocked.Add(ref processed, flureeBatch.Count);
+
+                            _logger.LogInformation("[FLUREE BATCH] Saved {Count} records | Total so far: {Processed}",
+                                flureeBatch.Count, processed);
+                        }
+                        catch (Exception ex)
+                        {
+                            Interlocked.Add(ref failed, flureeBatch.Count);
+                            _logger.LogError(ex, "[FLUREE BATCH FAILED] {Count} records lost in this batch", flureeBatch.Count);
+                            // Continue with next batch — don't abort entire job
+                        }
+
+                        // Small delay between Fluree calls to avoid overwhelming it
+                        if (!cancellationToken.IsCancellationRequested)
+                            await Task.Delay(DelayBetweenBatchesMs, cancellationToken);
+                    }
+
+                    _logger.LogInformation(
+                        "SQL Batch done → Collected={Collected} Processed={Processed} Skipped={Skipped} Failed={Failed}",
+                        flureeRecords.Count, processed, skipped, failed);
+                }
+
+                _logger.LogInformation(
+                    "=== Publish Complete → Total={Total} Processed={Processed} Skipped={Skipped} Failed={Failed} ===",
+                    allRolls.Count, processed, skipped, failed);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Fatal error in PublishAllResultsAsync");
+                throw;
+            }
+        }
+
+        #endregion
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
