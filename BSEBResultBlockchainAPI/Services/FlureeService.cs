@@ -725,35 +725,52 @@ namespace BSEBResultBlockchainAPI.Services
         {
             var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-            var transaction = batch.Select(r => new Dictionary<string, object>
+            // Pass a factory func instead of a pre-built object
+            // so each retry regenerates fresh GUIDs
+            await TransactWithRetry(() =>
             {
-                ["_id"] = "BSEB_FinalPublishedResult",
-                ["BSEB_FinalPublishedResult/bsebid"] = Guid.NewGuid().ToString(),
-                ["BSEB_FinalPublishedResult/rollcode"] = r.RollCode,
-                ["BSEB_FinalPublishedResult/rollnumber"] = r.RollNo,
-                ["BSEB_FinalPublishedResult/enc_v1"] = r.Enc_v1,
-                ["BSEB_FinalPublishedResult/createddate"] = nowMs,
-                ["BSEB_FinalPublishedResult/updateddate"] = nowMs
-            }).ToArray();
-
-            await TransactWithRetry(transaction, maxRetry: 3);
+                return batch.Select(r => new Dictionary<string, object>
+                {
+                    ["_id"] = "BSEB_FinalPublishedResult",
+                    ["BSEB_FinalPublishedResult/bsebid"] = Guid.NewGuid().ToString(), // fresh GUID per attempt
+                    ["BSEB_FinalPublishedResult/rollcode"] = r.RollCode,
+                    ["BSEB_FinalPublishedResult/rollnumber"] = r.RollNo,
+                    ["BSEB_FinalPublishedResult/enc_v1"] = r.Enc_v1,
+                    ["BSEB_FinalPublishedResult/createddate"] = nowMs,
+                    ["BSEB_FinalPublishedResult/updateddate"] = nowMs
+                }).ToArray();
+            }, maxRetry: 3);
 
             _logger.LogInformation("[Fluree] Bulk batch saved: {Count} records", batch.Count);
         }
 
-        private async Task TransactWithRetry(object transaction, int maxRetry = 3)
+        // Updated signature — accepts a factory instead of a pre-built payload
+        private async Task TransactWithRetry(Func<object> transactionFactory, int maxRetry = 3)
         {
             for (int attempt = 1; attempt <= maxRetry; attempt++)
             {
                 try
                 {
+                    var transaction = transactionFactory();
                     await TransactAsync(transaction);
                     return;
+                }
+                catch (TaskCanceledException ex) when (ex.InnerException is TimeoutException ||
+                                                        ex.Message.Contains("HttpClient.Timeout"))
+                {
+                    // ❌ Never retry on timeout — Fluree may have already committed the data.
+                    // Retrying would send duplicate GUIDs and cause db/invalid-tx error.
+                    _logger.LogError(ex,
+                        "[Fluree] Transact TIMED OUT on attempt {Attempt}/{Max}. NOT retrying to avoid duplicate inserts.",
+                        attempt, maxRetry);
+                    throw;
                 }
                 catch (Exception ex) when (attempt < maxRetry)
                 {
                     var delay = TimeSpan.FromSeconds(Math.Pow(2, attempt)); // 2s → 4s → 8s
-                    _logger.LogWarning(ex, "[Fluree] Transact attempt {Attempt}/{Max} failed. Retrying in {Delay}s...", attempt, maxRetry, delay.TotalSeconds);
+                    _logger.LogWarning(ex,
+                        "[Fluree] Transact attempt {Attempt}/{Max} failed. Retrying in {Delay}s...",
+                        attempt, maxRetry, delay.TotalSeconds);
                     await Task.Delay(delay);
                 }
                 catch (Exception ex)
